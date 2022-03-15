@@ -80,9 +80,8 @@ def construieste_drum_noprint(gr, nodCurent, limita, nrSolutiiCautate, tip_euris
     if gr.testeaza_scop(nodCurent) and nodCurent.f == limita:
     # if gr.testeaza_scop(nodCurent):
         print("Solutie: ")
-        nodCurent.afisDrum()
-        print(limita)
-        print(nodCurent.g)
+        nodCurent.afisDrum(afisCost=True, afisLung=True)
+        print("limita ", limita)
         print("\n----------------\n")
         nrSolutiiCautate -= 1
         if nrSolutiiCautate == 0:
@@ -101,7 +100,7 @@ def construieste_drum_noprint(gr, nodCurent, limita, nrSolutiiCautate, tip_euris
             # print("Noul minim: ", minim)
     return nrSolutiiCautate, minim
 
-gr = Graph("input4.txt")
+gr=Graph("input3.txt")
 
 # Rezolvat cu breadth first
 """
@@ -114,5 +113,5 @@ nrSolutiiCautate = 3
 # a_star(gr, nrSolutiiCautate=3, tip_euristica="euristica banala")
 # a_star(gr, nrSolutiiCautate=3, tip_euristica="euristica admisibila 1")
 # ida_star(gr, nrSolutiiCautate=3, tip_euristica="euristica admisibila 1")
-ida_star_noprint(gr, nrSolutiiCautate=1, tip_euristica="euristica admisibila 1")
+ida_star_noprint(gr, nrSolutiiCautate=1, tip_euristica="euristica banala")
 print(f'iteratii {it}')

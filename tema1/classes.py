@@ -69,6 +69,7 @@ class NodParcurgere:
     def __init__(self, board, parinte, info={}, cost=0, h=0, dir=None, movedPiece=None):
         # matrice care tine tabla
         self.board = board
+        self.setTuple()
         self.str = self.setStr()
         self.parinte = parinte  # parintele din arborele de parcurgere
         self.g = cost  # consider cost=1 pentru o mutare
@@ -90,6 +91,9 @@ class NodParcurgere:
                     continue
                 dic_piese[el] = True
                 self.buildPiece(row, col, visited)
+
+    def setTuple(self):
+        self.tup = (tuple(row) for row in self.board)
 
     def buildPiece(self, row, col, visited):
         el = self.board[row][col]
@@ -166,11 +170,11 @@ class NodParcurgere:
 
         board_copy = copy.deepcopy(self.board)
         for block in piece.blocks:
-            if 0 <= block[0] <= len(self.board) and 0 <= block[1] <= len(self.board[0]):
+            if 0 <= block[0] < len(self.board) and 0 <= block[1] < len(self.board[0]):
                 board_copy[block[0]][block[1]] = '.'
         # for block in piece.blocks:
         for block in info_copy[piece.name].blocks:
-            if 0 <= block[0] <= len(self.board) and 0 <= block[1] <= len(self.board[0]):
+            if 0 <= block[0] < len(self.board) and 0 <= block[1] < len(self.board[0]):
                 board_copy[block[0]][block[1]] = piece.name
 
         return board_copy, info_copy
@@ -212,10 +216,24 @@ class NodParcurgere:
 
         return False
 
+    def __hash__(self):
+        # return hash(self.board)
+
+        # ret = 0
+        # for key,val in self.info.items():
+        #     ret ^= hash(val)
+        # return ret
+
+        # return hash((tuple(row) for row in self.board))
+        return hash(self.tup)
+
     def __repr__(self):
         sir = ""
         sir += str(self.board)
         return (sir)
+
+    def __eq__(self, other):
+        return self.board == other.board
 
     def __lt__(self, other):
         if self.f < other.f:
@@ -232,6 +250,7 @@ class NodParcurgere:
         ret = ""
         if self.movedPiece is not None:
             ret += f'Moved {self.movedPiece} to {dir_map[self.dir]}\n'
+        ret += "h: " + str(self.h) + "\n"
         ret += self.str + "\n"
         # for (key, value) in self.info.items():
         # 	ret += str(value)
@@ -289,11 +308,12 @@ class Graph:  # graful problemei
             return 1
 
         elif tip_euristica == "euristica admisibila 1":
-            # idk calculez cat de departe e piesa speciala de exit si inmultesc distanta aia cu costul ei
+            # manhatan distance
             piesa_speciala = nod.info['*']
             # iau primul block din piesa speciala si consider pozitia lui, whatever
             block = piesa_speciala.blocks[0]
-            cost_pe_mutare = piesa_speciala.getCost()
+            # cost_pe_mutare = piesa_speciala.getCost()
+            cost_pe_mutare = 1
             multiplier = 1
             spatii_de_parcurs = abs(block[0] - self.coordsExit[0]) + abs(block[1] - self.coordsExit[1])
 
@@ -306,75 +326,81 @@ class Graph:  # graful problemei
             if nod.movedPiece == '*':
                 return 1
             else:
-                multiplier = 2
+                multiplier = 1
                 return nod.info[nod.movedPiece].getCost() * multiplier
 
         elif tip_euristica == "euristica admisibila 3":
             # adun catva la euristica pt fiecare pozitie in care nu se poate misca piesa speciala
             h = 0
-            inc = 10
+            inc = 1
             dirs = ['s', 'n', 'e', 'w']
             for dir in dirs:
                 if not nod.canMovePiece(nod.info['*'], dir):
                     h += inc
             return inc
 
-    def calculeaza_h_old(self, infoNod, tip_euristica="euristica banala"):
-        if tip_euristica == "euristica banala":
-            return 1
-        elif tip_euristica == "euristica admisibila 1":
-            # calculez cate blocuri nu sunt la locul fata de fiecare dintre starile scop, si apoi iau minimul dintre aceste valori
-            euristici = []
-            for (iScop, scop) in enumerate(self.scopuri):
-                h = 0
-                for iStiva, stiva in enumerate(infoNod):
-                    for iElem, elem in enumerate(stiva):
-                        try:
-                            # exista în stiva scop indicele iElem dar pe acea pozitie nu se afla blocul din infoNod
-                            if elem != scop[iStiva][iElem]:
-                                h += 1  # adun cu costul minim pe o mutare (adica costul lui a)
-                        except IndexError:
-                            # nici macar nu exista pozitia iElem in stiva cu indicele iStiva din scop
-                            h += 1
-                euristici.append(h)
-            return min(euristici)
-        elif tip_euristica == "euristica admisibila 2":
-            # calculez cate blocuri nu sunt la locul fata de fiecare dintre starile scop, si apoi iau minimul dintre aceste valori
-            euristici = []
-            for (iScop, scop) in enumerate(self.scopuri):
-                h = 0
-                for iStiva, stiva in enumerate(infoNod):
-                    for iElem, elem in enumerate(stiva):
-                        try:
-                            # exista în stiva scop indicele iElem dar pe acea pozitie nu se afla blocul din infoNod
-                            if elem != scop[iStiva][iElem]:
-                                h += 1
-                            else:  # elem==scop[iStiva][iElem]:
-                                if stiva[:iElem] != scop[iStiva][:iElem]:
-                                    h += 2
-                        except IndexError:
-                            # nici macar nu exista pozitia iElem in stiva cu indicele iStiva din scop
-                            h += 1
-                euristici.append(h)
-            return min(euristici)
-        else:  # tip_euristica=="euristica neadmisibila"
-            euristici = []
-            for (iScop, scop) in enumerate(self.scopuri):
-                h = 0
-                for iStiva, stiva in enumerate(infoNod):
-                    for iElem, elem in enumerate(stiva):
-                        try:
-                            # exista în stiva scop indicele iElem dar pe acea pozitie nu se afla blocul din infoNod
-                            if elem != scop[iStiva][iElem]:
-                                h += 3
-                            else:  # elem==scop[iStiva][iElem]:
-                                if stiva[:iElem] != scop[iStiva][:iElem]:
-                                    h += 2
-                        except IndexError:
-                            # nici macar nu exista pozitia iElem in stiva cu indicele iStiva din scop
-                            h += 3
-                euristici.append(h)
-            return max(euristici)
+        elif tip_euristica == "euristica admisibila 4":
+            # manhatan distance
+            piesa_speciala = nod.info['*']
+            block = piesa_speciala.blocks[0]
+            # cost_pe_mutare = piesa_speciala.getCost()
+            cost_pe_mutare = 1
+            multiplier = 1
+            spatii_de_parcurs = abs(block[0] - self.coordsExit[0]) + abs(block[1] - self.coordsExit[1])
+
+            # bonus daca mutam piesa speciala
+            return spatii_de_parcurs * cost_pe_mutare + nod.info[nod.movedPiece].getCost() if nod.movedPiece not in [None, '*'] else 1
+
+        elif tip_euristica == "euristica admisibila 5":
+            # verific daca exista cale libera pana la exit si ce blocuri am intalnit pana acolo
+            met = {}
+            viz = [[False for i in range(len(nod.board[0]))] for j in range(len(nod.board))]
+            q = []
+            d_row = [1, 0, -1, 0]
+            d_col = [0, 1, 0, -1]
+            for block in nod.info['*'].blocks:
+                if not (0 <= block[0] < len(nod.board) and 0 <= block[1] < len(nod.board[1])):
+                    continue
+                q += (block[0], block[1])
+                viz[block[0]][block[1]] = True
+
+            found = False
+            while len(q):
+                top = q.pop(0)
+                found = False
+                for i in range(4):
+                    neigh_row = block[0] + d_row[i]
+                    neigh_col = block[1] + d_col[i]
+                    if not (0 <= neigh_row < len(nod.board) and 0 <= neigh_col < len(nod.board[0])):
+                        # AM GASIT EXIT
+                        found = True
+                        break
+                    if not nod.board[neigh_row][neigh_col] in ['#', '.']:
+                        met[nod.board[neigh_row][neigh_col]] = True
+                    if nod.board[neigh_row][neigh_col] != '.':
+                        continue
+                    if viz[neigh_row][neigh_col]:
+                        continue
+                    q += ((neigh_row, neigh_col),)
+                    viz[neigh_row][neigh_col] = True
+
+                if found:
+                    break
+            if found:
+                return self.manhatan(nod)
+            else:
+                # returnez manhatan + costul de a muta cea mai ieftina intalnita\
+                prices = [nod.info[name].getCost() for name in met.keys()]
+                return self.manhatan(nod) + min(prices) if len(prices) else 0
+
+    def manhatan(self, nod):
+        # manhatan distance
+        piesa_speciala = nod.info['*']
+        # iau primul block din piesa speciala si consider pozitia lui, whatever
+        block = piesa_speciala.blocks[0]
+        # cost_pe_mutare = piesa_speciala.getCost()
+        spatii_de_parcurs = abs(block[0] - self.coordsExit[0]) + abs(block[1] - self.coordsExit[1])
+        return spatii_de_parcurs
 
     def __repr__(self):
         sir = ""
