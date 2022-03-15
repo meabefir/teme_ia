@@ -1,4 +1,3 @@
-
 from classes import *
 
 
@@ -100,18 +99,19 @@ def construieste_drum_noprint(gr, nodCurent, limita, nrSolutiiCautate, tip_euris
             # print("Noul minim: ", minim)
     return nrSolutiiCautate, minim
 
-gr=Graph("input3.txt")
+if __name__ == "__main__":
+    gr=Graph("input3.txt")
 
-# Rezolvat cu breadth first
-"""
-print("Solutii obtinute cu breadth first:")
-breadth_first(gr, nrSolutiiCautate=3)
-"""
+    # Rezolvat cu breadth first
+    """
+    print("Solutii obtinute cu breadth first:")
+    breadth_first(gr, nrSolutiiCautate=3)
+    """
 
-nrSolutiiCautate = 3
-# a_star(gr, nrSolutiiCautate=3,tip_euristica="euristica admisibila 1")
-# a_star(gr, nrSolutiiCautate=3, tip_euristica="euristica banala")
-# a_star(gr, nrSolutiiCautate=3, tip_euristica="euristica admisibila 1")
-# ida_star(gr, nrSolutiiCautate=3, tip_euristica="euristica admisibila 1")
-ida_star_noprint(gr, nrSolutiiCautate=1, tip_euristica="euristica banala")
-print(f'iteratii {it}')
+    nrSolutiiCautate = 3
+    # a_star(gr, nrSolutiiCautate=3,tip_euristica="euristica admisibila 1")
+    # a_star(gr, nrSolutiiCautate=3, tip_euristica="euristica banala")
+    # a_star(gr, nrSolutiiCautate=3, tip_euristica="euristica admisibila 1")
+    # ida_star(gr, nrSolutiiCautate=3, tip_euristica="euristica admisibila 1")
+    ida_star_noprint(gr, nrSolutiiCautate=1, tip_euristica="euristica banala")
+    print(f'iteratii {it}')

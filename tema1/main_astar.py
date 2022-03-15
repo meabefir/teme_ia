@@ -1,36 +1,35 @@
-
 import queue
 import heapq
 from classes import *
 
-show_info = False
+show_info = True
 
 def breadth_first(gr, nrSolutiiCautate):
-
+	global show_info
 	#in coada vom avea doar noduri de tip NodParcurgere (nodurile din arborele de parcurgere)
-	c=[NodParcurgere(gr.start, None, {}, 0, gr.calculeaza_h(gr.start))]
-	
+	c=[NodParcurgere(gr.start, None, {}, 0, gr.calculeaza_h(None))]
+
 	while len(c)>0:
 		#print("Coada actuala: " + str(c))
 		#input()
 		nodCurent=c.pop(0)
 
 		if gr.testeaza_scop(nodCurent):
-			print("Solutie:")
-			nodCurent.afisDrum(afisCost=True, afisLung=True)
-			print("\n----------------\n")
-			input()
+			if show_info:
+				print("Solutie:")
+				nodCurent.afisDrum(afisCost=True, afisLung=True)
+				print("\n----------------\n")
 			nrSolutiiCautate-=1
 			if nrSolutiiCautate==0:
-				return
-		lSuccesori=gr.genereazaSuccesori(nodCurent)	
+				return nodCurent.getSolutionMoves()
+		lSuccesori=gr.genereazaSuccesori(nodCurent)
 		c.extend(lSuccesori)
 
 def a_star(gr, nrSolutiiCautate, tip_euristica):
 	global show_info
 	#in coada vom avea doar noduri de tip NodParcurgere (nodurile din arborele de parcurgere)
 	q = queue.PriorityQueue()
-	nod_start = NodParcurgere(gr.start, None, {}, 0, gr.calculeaza_h(gr.start))
+	nod_start = NodParcurgere(gr.start, None, {}, 0, gr.calculeaza_h(None))
 	q.put(nod_start)
 	open = {nod_start: nod_start}
 	# q.queue va fi folosit pe post de open
@@ -101,21 +100,24 @@ def a_star(gr, nrSolutiiCautate, tip_euristica):
 			q.put(s)
 			open[s] = s
 
-# gr=Graph("input0.txt")
-# gr=Graph("input3.txt")
-gr=Graph("input5.txt")
+if __name__ == "__main__":
+	# gr=Graph("input0.txt")
+	# gr=Graph("input3.txt")
+	gr=Graph("input/input0.txt")
+	s = "##.##\n#...#\n#abc#\n#.*.#\n#####"
+	# gr=Graph(None, s)
 
-#Rezolvat cu breadth first
-"""
-print("Solutii obtinute cu breadth first:")
-breadth_first(gr, nrSolutiiCautate=3)
-"""
-# breadth_first(gr, nrSolutiiCautate=1)
+	#Rezolvat cu breadth first
+	"""
+	print("Solutii obtinute cu breadth first:")
+	breadth_first(gr, nrSolutiiCautate=3)
+	"""
+	breadth_first(gr, nrSolutiiCautate=1)
 
-# a_star(gr, nrSolutiiCautate=3,tip_euristica="euristica admisibila 1")
-# a_star(gr, nrSolutiiCautate=3, tip_euristica="euristica banala")
-# a_star(gr, nrSolutiiCautate=1, tip_euristica="euristica banala")
-# a_star(gr, nrSolutiiCautate=1, tip_euristica="euristica admisibila 1")
-import cProfile
-# cProfile.run('a_star(gr, nrSolutiiCautate=1, tip_euristica="euristica admisibila 5")')
-a_star(gr, nrSolutiiCautate=1, tip_euristica="euristica admisibila 5")
+	# a_star(gr, nrSolutiiCautate=3,tip_euristica="euristica admisibila 1")
+	# a_star(gr, nrSolutiiCautate=3, tip_euristica="euristica banala")
+	# a_star(gr, nrSolutiiCautate=1, tip_euristica="euristica banala")
+	# a_star(gr, nrSolutiiCautate=1, tip_euristica="euristica admisibila 1")
+	import cProfile
+	# cProfile.run('a_star(gr, nrSolutiiCautate=1, tip_euristica="euristica admisibila 5")')
+	# a_star(gr, nrSolutiiCautate=1, tip_euristica="euristica admisibila 5")

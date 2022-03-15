@@ -197,6 +197,15 @@ class NodParcurgere:
             nod = nod.parinte
         return l
 
+    def getSolutionMoves(self):
+        ret = []
+        l = self.obtineDrum()
+        for nod in l:
+            if nod.movedPiece is None:
+                continue
+            ret += [[nod.movedPiece, nod.dir]]
+        return ret
+
     def afisDrum(self, afisCost=False, afisLung=False):  # returneaza si lungimea drumului
         l = self.obtineDrum()
         for nod in l:
@@ -258,12 +267,18 @@ class NodParcurgere:
 
 
 class Graph:  # graful problemei
-    def __init__(self, nume_fisier):
+    def __init__(self, nume_fisier, s=""):
         self.coordsExit = [-1, -1]
 
-        f = open(nume_fisier, 'r')
+        continutFisier = ""
+        if nume_fisier is not None:
+            f = open(nume_fisier, 'r')
+            continutFisier = f.read()
+            f.close()
+        else:
+            continutFisier = s
 
-        continutFisier = f.read()  # citesc tot continutul fisierului
+
         self.start = [[el for el in line] for line in continutFisier.split("\n")]
 
         # caut pe borduri unde e portita

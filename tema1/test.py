@@ -18,6 +18,6 @@
 #
 # print(l[0])
 
-ls = [[1,2], [3,4]]
-ls.remove([1,2])
-print(ls)
+d = {1:'s', 2:'3'}
+
+print('s' in d)

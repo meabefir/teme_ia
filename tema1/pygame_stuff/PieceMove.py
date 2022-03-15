@@ -1,14 +1,19 @@
 class PieceMove:
-    def __init__(self, board, piece_name, dir, duration):
+    def __init__(self, board, piece, dir, duration):
         self.board = board
-        self.piece_name = piece_name
+        self.piece = piece
+        self.piece_name = piece.value
         self.dir = dir
         self.duration = duration
         self.frame = 0
         self.finished = False
+        self.started = False
 
         self.distance_per_frame = board.cell_size / self.duration
         self.dx, self.dy = self.interpretDirection(dir)
+
+    def start(self):
+        self.started = True
 
     def interpretDirection(self, dir):
         if dir == 'n':
@@ -34,10 +39,9 @@ class PieceMove:
         if self.finished == True:
             return
         self.frame += 1
-        self.board.pieces[self.piece_name].move(self.dx * self.distance_per_frame, self.dy * self.distance_per_frame)
+        self.piece.translate(self.dx * self.distance_per_frame, self.dy * self.distance_per_frame)
 
         if self.frame >= self.duration:
-            # TODO
-            # update the blocks positions in the piece
-            # update the board.data (the actual board matrix with cells)
+            drow, dcol = self.interpretMatrixDirection(self.dir)
+            self.piece.move(drow, dcol)
             self.finished = True

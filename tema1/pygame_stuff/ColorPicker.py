@@ -70,7 +70,7 @@ class ColorPicker:
                 if color_under_mouse is None:
                     return
                 self.selectedColor = color_under_mouse
-                if not self.colorChangeCallback is None:
+                if self.colorChangeCallback is not None:
                     self.colorChangeCallback(self.selectedColor)
 
     def render(self, screen):

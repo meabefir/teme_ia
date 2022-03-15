@@ -6,7 +6,8 @@ from pygame_stuff.Game import Game
 
 screen = pygame.display.set_mode([500, 500])
 
-game = Game()
+# game = Game(file="../input/input0.txt")
+game = Game(rows=8, cols=8)
 clock = pygame.time.Clock()
 
 running = True
@@ -14,9 +15,13 @@ while running:
 
     # Did the user click the window close button?
     for event in pygame.event.get():
+        game.handleEvent(event)
         if event.type == pygame.QUIT:
             running = False
-        game.handleEvent(event)
+
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_r:
+                game = Game()
 
     # Fill the background with white
     screen.fill((0, 0, 0))

@@ -1,4 +1,5 @@
 import pygame
+import copy
 from .ColorPicker import ColorPicker
 
 class Cell:
@@ -8,14 +9,19 @@ class Cell:
         self.col = col
         self.value = value
         self.rect = pygame.Rect(pos[0], pos[1], size, size)
+        self.initial_rect = copy.deepcopy(self.rect)
         self.pos = [pos[0], pos[1]]
 
-    def move(self, dx, dy):
+    def translate(self, dx, dy):
         # self.rect.move_ip(dx, dy)
         self.pos[0] += dx
         self.pos[1] += dy
         self.rect.x = self.pos[0]
         self.rect.y = self.pos[1]
+
+    def resetAfterTranslate(self):
+        self.rect = copy.deepcopy(self.initial_rect)
+        self.pos[0], self.pos[1] = self.rect.x, self.rect.y
 
     def assignValue(self, value):
         self.value = value
@@ -26,7 +32,7 @@ class Cell:
 
     def render(self, screen):
         if self.value == '#':
-            pygame.draw.rect(screen, pygame.Color("brown"), self.rect)
+            pygame.draw.rect(screen, pygame.Color(92, 62, 30), self.rect)
             return
         elif self.value == '.':
             return

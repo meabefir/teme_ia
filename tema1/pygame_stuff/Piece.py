@@ -1,10 +1,29 @@
 import copy
 
+
 class Piece:
     def __init__(self, board, value):
         self.board = board
         self.value = value
         self.blocks = []
+
+    def canMoveTo(self, dir):
+        drow, dcol = 0, 0
+        if dir == 'n':
+            drow, dcol = -1, 0
+        elif dir == 's':
+            drow, dcol = 1, 0
+        elif dir == 'w':
+            drow, dcol = 0, -1
+        else:
+            drow, dcol = 0, 1
+
+        for block in self.blocks:
+            n_row, n_col = block[0] + drow, block[1] + dcol
+            if (0 <= n_row < len(self.board.data) and 0 <= n_col < len(self.board.data[0])):
+                if self.board.data[n_row][n_col].value not in ['.', self.value]:
+                    return False
+        return True
 
     def splitsIfRemove(self, row, col):
         if len(self.blocks) == 1:
@@ -13,8 +32,8 @@ class Piece:
         cpy = copy.deepcopy(self.blocks)
         cpy.remove([row, col])
 
-        drow = [1,0,-1,0]
-        dcol = [0,1,0,-1]
+        drow = [1, 0, -1, 0]
+        dcol = [0, 1, 0, -1]
         visited = []
         q = [cpy[0]]
         # daca le intalnim pe toate in parcurgere inseamna ca nu le desparte
@@ -43,18 +62,45 @@ class Piece:
             self.board.removePiece(self.value)
 
     def neighOf(self, row, col):
-        dirs = [[row+1, col], [row-1, col], [row, col+1], [row, col-1]]
+        dirs = [[row + 1, col], [row - 1, col], [row, col + 1], [row, col - 1]]
         for block in self.blocks:
             for dir in dirs:
                 if block == dir:
                     return True
         return False
 
-    def move(self, dx, dy):
+    def translate(self, dx, dy):
         for block in self.blocks:
-            # cell = self.board.data[block[0]][block[1]]
-            # cell.move(dx, dy)
-            self.board.data[block[0]][block[1]].move(dx, dy)
+            if not self.board.inBounds(block[0], block[1]):
+                continue
+            cell = self.board.data[block[0]][block[1]]
+            cell.translate(dx, dy)
+            # self.board.data[block[0]][block[1]].translate(dx, dy)
+
+    def move(self, drow, dcol):
+        # update the board.data (the actual board matrix with cells)
+        # update the blocks positions in the piece
+        for block in self.blocks:
+            if not self.board.inBounds(block[0], block[1]):
+                continue
+            self.board.data[block[0]][block[1]].assignValue('.')
+            self.board.data[block[0]][block[1]].resetAfterTranslate()
+        for block in self.blocks:
+            if not self.board.inBounds(block[0], block[1]):
+                continue
+            block[0] += drow
+            block[1] += dcol
+        for block in self.blocks:
+            if not self.board.inBounds(block[0], block[1]):
+                continue
+            self.board.data[block[0]][block[1]].assignValue(self.value)
+
+        to_remove = []
+        for block in reversed(self.blocks):
+            if not self.board.inBounds(block[0], block[1]):
+                to_remove += [block]
+        for block in to_remove:
+            self.removeBlock(block[0], block[1])
 
     def __str__(self):
         ret = ""

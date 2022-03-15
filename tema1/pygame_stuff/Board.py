@@ -4,6 +4,9 @@ from .ColorPicker import ColorPicker
 from .Piece import Piece
 from .PieceMove import PieceMove
 
+from classes import Graph
+from main_astar import breadth_first
+
 class Board:
     def __init__(self, pos, rows, cols, width=200):
         self.cell_size = width / cols
@@ -32,19 +35,48 @@ class Board:
             self.data[row][0] = Cell("#", row, 0, (self.rect.x + 0 * self.cell_size, self.rect.y + row * self.cell_size), self.cell_size)
             self.data[row][self.cols-1] = Cell("#", row, self.cols-1, (self.rect.x + (self.cols-1) * self.cell_size, self.rect.y + row * self.cell_size), self.cell_size)
 
-    def mocAnimate(self):
-        self.moves.append(PieceMove(self, 'red', 'e', 20))
-        self.moves.append(PieceMove(self, 'red', 'e', 20))
-        self.moves.append(PieceMove(self, 'red', 'e', 20))
-        self.moves.append(PieceMove(self, 'red', 's', 20))
-        self.moves.append(PieceMove(self, 'red', 's', 20))
-        self.moves.append(PieceMove(self, 'red', 'w', 20))
-        self.moves.append(PieceMove(self, 'red', 'w', 20))
-        self.moves.append(PieceMove(self, 'red', 'w', 20))
-        self.moves.append(PieceMove(self, 'red', 's', 20))
-        self.moves.append(PieceMove(self, 'red', 'n', 20))
-        self.moves.append(PieceMove(self, 'red', 'n', 20))
+    def loadFromString(self, s):
+        colors_used = {'*': 'red'}
+        self.pieces['red'] = Piece(self, 'red')
+        for row, line in enumerate(s):
+            for col, ch in enumerate(line):
+                if ch in ['.', '#']:
+                    self.data[row][col].value = ch
+                    continue
+                # set color for this char
+                if ch not in colors_used:
+                    for color in ColorPicker.COLORS:
+                        if color in colors_used.values():
+                            continue
+                        colors_used[ch] = color
+                        break
+
+                self.data[row][col].value = colors_used[ch]
+                if colors_used[ch] not in self.pieces:
+                    self.pieces[colors_used[ch]] = Piece(self, colors_used[ch])
+                self.pieces[colors_used[ch]].addBlock(row, col)
+
+        print(self.pieces)
+
+    def animate(self):
         self.animating = True
+
+    def stopAnimate(self):
+        self.animating = False
+
+    def mocAnimate(self):
+        # self.moves.append(PieceMove(self, self.pieces["red"], 'e', 20))
+        # self.moves.append(PieceMove(self, self.pieces["red"], 's', 20))
+        # self.moves.append(PieceMove(self, self.pieces["red"], 'w', 20))
+        # self.moves.append(PieceMove(self, self.pieces["red"], 's', 20))
+        # self.moves.append(PieceMove(self, self.pieces["red"], 'e', 20))
+        # self.moves.append(PieceMove(self, self.pieces["red"], 'n', 20))
+        # self.moves.append(PieceMove(self, self.pieces["red"], 'w', 20))
+        # self.moves.append(PieceMove(self, self.pieces["red"], 'n', 20))
+
+        self.moves.append(PieceMove(self, self.pieces["red"], 's', 20))
+
+        self.animate()
 
     def setSelectedColor(self, color):
         self.selectedColor = color
@@ -56,11 +88,11 @@ class Board:
         str = ""
         current_char = 'a'
         dic = {}
-        for l_row in self.data:
-            str += '\n'
+        for i, l_row in enumerate(self.data):
             for cell in l_row:
                 if cell.value == 'red':
                     str += '*'
+                    dic['red'] = '*'
                 elif cell.value in ['.', '#']:
                     str += cell.value
                 else:
@@ -70,10 +102,49 @@ class Board:
                         dic[cell.value] = current_char
                         current_char = chr(ord(current_char)+1)
                         str += dic[cell.value]
-        return str
+            if i == len(self.data) - 1:
+                continue
+            str += '\n'
+        return str, dic
 
     def removePiece(self, value):
         self.pieces.pop(value, None)
+
+    def inBounds(self, row, col):
+        return 0 <= row < len(self.data) and 0 <= col < len(self.data[0])
+
+    def attemptPieceMove(self, key):
+        key_dir_map = {
+            pygame.K_UP: 'n',
+            pygame.K_DOWN: 's',
+            pygame.K_LEFT: 'w',
+            pygame.K_RIGHT: 'e'
+        }
+
+        for l_row in self.data:
+            for cell in l_row:
+                if cell.isMouseOver():
+                    if cell.value in ['.', '#']:
+                        return
+                    self.moves.append(PieceMove(self, self.pieces[cell.value], key_dir_map[key], 20))
+                    self.animate()
+                    return
+
+    def findSolution(self):
+        s, dic = self.serialize()
+        if 'red' not in dic:
+            return
+
+        rev_dic = {'*': 'red'}
+        for key, val in dic.items():
+            rev_dic[val] = key
+        graph = Graph(None, s)
+
+        moves = breadth_first(graph, 1)
+        print("moves ", moves)
+        for move in moves:
+            self.moves.append(PieceMove(self, self.pieces[rev_dic[move[0]]], move[1], 20))
+        self.animate()
 
     def handleEvent(self, event):
         if self.animating:
@@ -137,14 +208,30 @@ class Board:
                 print(self.pieces)
             elif event.key == pygame.K_a:
                 self.mocAnimate()
+            elif event.key in [pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN]:
+                self.attemptPieceMove(event.key)
+            elif event.key == pygame.K_f:
+                self.findSolution()
 
     def update(self):
-        if len(self.moves):
-            self.moves[0].update()
-            if self.moves[0].finished:
-                self.moves.pop(0)
-                if len(self.moves) == 0:
-                    self.animating = False
+        # only update the first animation given
+        if self.animating:
+            if len(self.moves):
+                # check if can move that piece
+                if self.moves[0].started == False:
+                    if not self.moves[0].piece.canMoveTo(self.moves[0].dir):
+                        self.moves.pop(0)
+                        if len(self.moves) == 0:
+                            self.stopAnimate()
+                        return
+                    self.moves[0].start()
+                    return
+
+                self.moves[0].update()
+                if self.moves[0].finished:
+                    self.moves.pop(0)
+                    if len(self.moves) == 0:
+                        self.stopAnimate()
 
     def draw_cell_borders(self, screen):
         for row in range(self.rows):
@@ -152,7 +239,7 @@ class Board:
                 pygame.draw.rect(screen, pygame.Color("white"), (self.rect.y + col * self.cell_size, self.rect.x + row * self.cell_size, self.cell_size, self.cell_size), 1)
 
     def render(self, screen):
-        pygame.draw.rect(screen, ColorPicker.COLORS[self.selectedColor], self.rect, 2)
+        pygame.draw.rect(screen, ColorPicker.COLORS[self.selectedColor], self.rect, 5)
 
         self.draw_cell_borders(screen)
 
