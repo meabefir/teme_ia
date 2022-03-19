@@ -16,9 +16,12 @@ class Piece:
         self.bbcol1 = min([el[1] for el in self.blocks])
         self.bbcol2 = max([el[1] for el in self.blocks])
 
-    def getBB(self):
+    def getBBString(self):
         ret = f'{self.bbrow1} {self.bbcol1} {self.bbrow2} {self.bbcol2}'
         return ret
+
+    def getBB(self):
+        return self.bbrow1, self.bbcol1, self.bbrow2, self.bbcol2
 
     def getCost(self):
         if self.name == '*':
@@ -41,7 +44,7 @@ class Piece:
         return Piece(self.board, new_blocks, self.name)
 
     def isOOB(self):
-        return self.bbrow2 < 0 or self.bbrow1 > len(self.board) or self.bbcol2 < 0 or self.bbcol1 > len(self.board[0])
+        return self.bbrow2 < 0 or self.bbrow1 >= len(self.board) or self.bbcol2 < 0 or self.bbcol1 >= len(self.board[0])
 
     def __str__(self):
         ret = f'[{self.name}]\n'
@@ -181,9 +184,12 @@ class NodParcurgere:
 
     def setStr(self):
         ret = ""
-        for line in self.board:
-            ret += "".join(line)
-            ret += "\n"
+        for row in self.board:
+            str_row = ""
+            for ch in row:
+                str_row += ch
+            str_row += '\n'
+            ret += str_row
         return ret
 
     def isScope(self):
@@ -206,6 +212,18 @@ class NodParcurgere:
             ret += [[nod.movedPiece, nod.dir]]
         return ret
 
+    def strAfisDrum(self, afisCost=True, afisLung=True):
+        l = self.obtineDrum()
+        ret = ""
+        if afisCost:
+            ret += "Cost: " + str(self.g) + "\n"
+        if afisCost:
+            ret += "Lungime: " + str(len(l)) + "\n"
+        for nod in l:
+            ret += str(nod) + "\n"
+
+        return ret
+
     def afisDrum(self, afisCost=False, afisLung=False):  # returneaza si lungimea drumului
         l = self.obtineDrum()
         for nod in l:
@@ -215,6 +233,9 @@ class NodParcurgere:
         if afisCost:
             print("Lungime: ", len(l))
         return len(l)
+
+    def afisLungimeDrum(self):
+        print(len(self.obtineDrum()))
 
     def contineInDrum(self, new_board):
         nodDrum = self
@@ -226,15 +247,7 @@ class NodParcurgere:
         return False
 
     def __hash__(self):
-        # return hash(self.board)
-
-        # ret = 0
-        # for key,val in self.info.items():
-        #     ret ^= hash(val)
-        # return ret
-
-        # return hash((tuple(row) for row in self.board))
-        return hash(self.tup)
+        return hash(self.str)
 
     def __repr__(self):
         sir = ""
@@ -242,7 +255,8 @@ class NodParcurgere:
         return (sir)
 
     def __eq__(self, other):
-        return self.board == other.board
+        # return self.board == other.board
+        return hash(self) == hash(other)
 
     def __lt__(self, other):
         if self.f < other.f:
@@ -268,7 +282,7 @@ class NodParcurgere:
 
 class Graph:  # graful problemei
     def __init__(self, nume_fisier, s=""):
-        self.coordsExit = [-1, -1]
+        self.coordsExit = []
 
         continutFisier = ""
         if nume_fisier is not None:
@@ -284,17 +298,32 @@ class Graph:  # graful problemei
         # caut pe borduri unde e portita
         for i in range(len(self.start[0])):
             if self.start[0][i] == '.':
-                self.coordsExit = [0, i]
+                self.coordsExit += [[0, i]]
             elif self.start[len(self.start) - 1][i] == '.':
-                self.coordsExit = [len(self.start) - 1, i]
+                self.coordsExit += [[len(self.start) - 1, i]]
         for i in range(1, len(self.start) - 1):
             if self.start[i][0] == '.':
-                self.coordsExit = [i, 0]
+                self.coordsExit += [[i, 0]]
             elif self.start[i][len(self.start[0]) - 1] == '.':
-                self.coordsExit = [i, len(self.start[0]) - 1]
-
+                self.coordsExit += [[i, len(self.start[0]) - 1]]
+        print(self.coordsExit)
         print("Stare Initiala:\n")
         pprint(self.start)
+
+        self.exit_bbrow1 = float("inf")
+        self.exit_bbcol1 = float("inf")
+        self.exit_bbrow2 = 0
+        self.exit_bbcol2 = 0
+
+        for row, col in self.coordsExit:
+            if row < self.exit_bbrow1:
+                self.exit_bbrow1 = row
+            if col < self.exit_bbcol1:
+                self.exit_bbcol1 = col
+            if row > self.exit_bbrow2:
+                self.exit_bbrow2 = row
+            if col > self.exit_bbcol2:
+                self.exit_bbcol2 = col
 
     def testeaza_scop(self, nodCurent):
         return nodCurent.isScope()
@@ -309,7 +338,6 @@ class Graph:  # graful problemei
                     continue
                 new_board, new_info = nodCurent.movePiece(piece, dir)
                 move_cost = piece.getCost()
-                # euristica to be added ...
                 # stc atentie aici, posibil sa fie nevoie de info, nu de board
                 if nodCurent.contineInDrum(new_board):
                     continue
@@ -323,28 +351,9 @@ class Graph:  # graful problemei
             return 1
 
         elif tip_euristica == "euristica admisibila 1":
-            # manhatan distance
-            piesa_speciala = nod.info['*']
-            # iau primul block din piesa speciala si consider pozitia lui, whatever
-            block = piesa_speciala.blocks[0]
-            # cost_pe_mutare = piesa_speciala.getCost()
-            cost_pe_mutare = 1
-            multiplier = 1
-            spatii_de_parcurs = abs(block[0] - self.coordsExit[0]) + abs(block[1] - self.coordsExit[1])
+            return self.manhatan(nod)
 
-            return spatii_de_parcurs * cost_pe_mutare * multiplier
-
-        elif tip_euristica == "euristica admisibila 2":
-            # prioritizez daca s-a miscat piesa speciala
-            if nod.movedPiece is None:
-                return 1
-            if nod.movedPiece == '*':
-                return 1
-            else:
-                multiplier = 1
-                return nod.info[nod.movedPiece].getCost() * multiplier
-
-        elif tip_euristica == "euristica admisibila 3":
+        elif tip_euristica == "euristica neadmisibila 1":
             # adun catva la euristica pt fiecare pozitie in care nu se poate misca piesa speciala
             h = 0
             inc = 1
@@ -354,20 +363,13 @@ class Graph:  # graful problemei
                     h += inc
             return inc
 
-        elif tip_euristica == "euristica admisibila 4":
-            # manhatan distance
-            piesa_speciala = nod.info['*']
-            block = piesa_speciala.blocks[0]
-            # cost_pe_mutare = piesa_speciala.getCost()
-            cost_pe_mutare = 1
-            multiplier = 1
-            spatii_de_parcurs = abs(block[0] - self.coordsExit[0]) + abs(block[1] - self.coordsExit[1])
+        elif tip_euristica == "euristica neadmisibila 2":
+            # prioritizam mutarea piesei speciale
+            return nod.info[nod.movedPiece].getCost() * 1 if nod.movedPiece not in [None, '*'] else 1
 
-            # bonus daca mutam piesa speciala
-            return spatii_de_parcurs * cost_pe_mutare + nod.info[nod.movedPiece].getCost() if nod.movedPiece not in [None, '*'] else 1
-
-        elif tip_euristica == "euristica admisibila 5":
+        elif tip_euristica == "euristica neadmisibila 3":
             # verific daca exista cale libera pana la exit si ce blocuri am intalnit pana acolo
+            # numar de asemenea cate spatii libere sunt accesibile de catre piesa speciala
             met = {}
             viz = [[False for i in range(len(nod.board[0]))] for j in range(len(nod.board))]
             q = []
@@ -376,12 +378,14 @@ class Graph:  # graful problemei
             for block in nod.info['*'].blocks:
                 if not (0 <= block[0] < len(nod.board) and 0 <= block[1] < len(nod.board[1])):
                     continue
-                q += (block[0], block[1])
+                q += ((block[0], block[1]),)
                 viz[block[0]][block[1]] = True
 
+            blocuri_total = (len(nod.board)-2) * (len(nod.board[0])-2)
+            accesibile = 0
             found = False
             while len(q):
-                top = q.pop(0)
+                block = q.pop(0)
                 found = False
                 for i in range(4):
                     neigh_row = block[0] + d_row[i]
@@ -390,10 +394,11 @@ class Graph:  # graful problemei
                         # AM GASIT EXIT
                         found = True
                         break
-                    if not nod.board[neigh_row][neigh_col] in ['#', '.']:
+                    if not nod.board[neigh_row][neigh_col] in ['#', '.', '*']:
                         met[nod.board[neigh_row][neigh_col]] = True
                     if nod.board[neigh_row][neigh_col] != '.':
                         continue
+                    accesibile += 1
                     if viz[neigh_row][neigh_col]:
                         continue
                     q += ((neigh_row, neigh_col),)
@@ -406,16 +411,35 @@ class Graph:  # graful problemei
             else:
                 # returnez manhatan + costul de a muta cea mai ieftina intalnita\
                 prices = [nod.info[name].getCost() for name in met.keys()]
-                return self.manhatan(nod) + min(prices) if len(prices) else 0
+                return self.manhatan(nod) + (min(prices) if len(prices) else 0)
 
     def manhatan(self, nod):
         # manhatan distance
         piesa_speciala = nod.info['*']
-        # iau primul block din piesa speciala si consider pozitia lui, whatever
-        block = piesa_speciala.blocks[0]
-        # cost_pe_mutare = piesa_speciala.getCost()
-        spatii_de_parcurs = abs(block[0] - self.coordsExit[0]) + abs(block[1] - self.coordsExit[1])
-        return spatii_de_parcurs
+        # # iau primul block din piesa speciala si consider pozitia lui, whatever
+        # block = piesa_speciala.blocks[0]
+        # # cost_pe_mutare = piesa_speciala.getCost()
+        # spatii_de_parcurs = abs(block[0] - self.coordsExit[0][0]) + abs(block[1] - self.coordsExit[0][1])
+        # manhatan_maxim = (len(nod.board)-2) + (len(nod.board[0])-2)
+        # # return manhatan_maxim - spatii_de_parcurs
+        # return spatii_de_parcurs
+
+        deltaRow = deltaCol = 0
+        startRow, startCol, finalRow, finalCol = piesa_speciala.getBB()
+
+        if self.coordsExit[0][0] == 0:  # iesirea e sus
+            deltaRow = finalRow
+            deltaCol = min(abs(finalCol - self.exit_bbcol2), abs(startCol - self.exit_bbcol1))
+        elif self.coordsExit[0][0] == len(nod.board) - 1:  # jos
+            deltaRow = abs(len(nod.board) - startRow) - 1
+            deltaCol = min(abs(finalCol - self.exit_bbcol2), abs(startCol - self.exit_bbcol1))
+        elif self.coordsExit[0][1] == 0:  # stanga
+            deltaRow = min(abs(finalRow - self.exit_bbrow2), abs(startRow - self.exit_bbrow1))
+            deltaCol = finalCol
+        elif self.coordsExit[0][1] == len(nod.board[0]) - 1:  # dreapta
+            deltaRow = min(abs(finalRow - self.exit_bbrow2), abs(startRow - self.exit_bbrow1))
+            deltaCol = abs(startCol - self.exit_bbcol1)
+        return deltaRow + deltaCol
 
     def __repr__(self):
         sir = ""

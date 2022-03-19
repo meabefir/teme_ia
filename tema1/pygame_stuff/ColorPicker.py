@@ -5,12 +5,17 @@ class ColorPicker:
     COLORS = {
         "red": (255, 0, 0),
         "orange": (255, 128, 0),
+        "orange2": (255, 128, 128),
         "yellow": (255, 255, 0),
+        "yellow2": (128, 255, 0),
         "green": (0, 255, 0),
         "blue": (0, 0, 255),
         "purple": (128, 0, 255),
+        "purple2": (128, 128, 255),
         "pink": (255, 0, 255),
-        "gray": (128, 128, 128)
+        "pink2": (255, 128, 255),
+        "gray": (128, 128, 128),
+
     }
 
     def __init__(self, pos = (100, 100), cols=4, width=100, colorChangeCallback=None):

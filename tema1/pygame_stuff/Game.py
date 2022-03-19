@@ -11,14 +11,14 @@ from .Board import Board
 
 class Game:
 
-    def __init__(self, rows=10, cols=10, pos=(100, 100), size=(300, 250), file=""):
-        self.board = Board((pos[0], pos[1]), rows, cols, width=200) if file == "" else self.loadFromFile(file)
+    def __init__(self, rows=8, cols=8, pos=(100, 100), size=(300, 250), file=""):
+        self.board = Board((pos[0], pos[1]), rows+2, cols+2, width=200) if file == "" else self.loadFromFile(file)
 
         self.colorPicker = ColorPicker((pos[0] + size[0] - 100, pos[1]), width=100,
                                        colorChangeCallback=self.board.setSelectedColor)
 
-        self.rows = rows
-        self.cols = cols
+        self.rows = rows+2
+        self.cols = cols+2
         self.pos = pos
         self.rect = pygame.Rect(pos[0], pos[1], size[0], size[1])
 

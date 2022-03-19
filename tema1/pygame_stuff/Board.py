@@ -1,11 +1,19 @@
 import pygame
+import threading
 from .Cell import Cell
 from .ColorPicker import ColorPicker
 from .Piece import Piece
 from .PieceMove import PieceMove
+from .pygame_wrapper import draw_rect
 
 from classes import Graph
-from main_astar import breadth_first
+from astar import a_star
+from astar_opt import a_star_opt
+from astar_opti import a_star_opti
+from idastar import ida_star_noprint
+from dfs import dfs
+from bfs import bfs
+from dfi import dfi
 
 class Board:
     def __init__(self, pos, rows, cols, width=200):
@@ -140,10 +148,21 @@ class Board:
             rev_dic[val] = key
         graph = Graph(None, s)
 
-        moves = breadth_first(graph, 1)
+        _timeout = 5
+        # moves = bfs(graph, 1, timeout=_timeout)
+        # moves = dfs(graph, 1, timeout=_timeout)
+        # moves = dfi(graph, 1, timeout=_timeout)
+        moves = a_star(graph, 1, "euristica admisibila 1", timeout=_timeout)
+        # moves = a_star_opt(graph, 1, "euristica admisibila 1", timeout=_timeout)
+        # moves = ida_star_noprint(graph, 1, "euristica admisibila 1", timeout=_timeout)
+
         print("moves ", moves)
+        if not moves:
+            return
+        if isinstance(moves, str):
+            return
         for move in moves:
-            self.moves.append(PieceMove(self, self.pieces[rev_dic[move[0]]], move[1], 20))
+            self.moves.append(PieceMove(self, self.pieces[rev_dic[move[0]]], move[1], 3))
         self.animate()
 
     def handleEvent(self, event):
@@ -157,11 +176,9 @@ class Board:
                 return
             for row, l_row in enumerate(self.data):
                 for col, cell in enumerate(l_row):
+                    if not cell.isMouseOver():
+                        continue
                     if left:
-                        # daca nu este mouse-ul peste ea
-                        if not cell.isMouseOver():
-                            continue
-
                         # daca e celula margine nu ii pot da culoare
                         if self.isBorderBlock(row, col):
                             if cell.value == '#':
@@ -200,10 +217,15 @@ class Board:
                             new_piece = Piece(self, self.selectedColor)
                             new_piece.addBlock(row, col)
                             self.pieces[self.selectedColor] = new_piece
+                    elif right:
+                        if cell.value not in ['.', '*', '#']:
+                            if not self.pieces[cell.value].splitsIfRemove(row, col):
+                                self.pieces[cell.value].removeBlock(row, col)
+                                cell.assignValue('.')
 
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_s:
-                print(self.serialize())
+                print(self.serialize()[0])
             elif event.key == pygame.K_p:
                 print(self.pieces)
             elif event.key == pygame.K_a:
@@ -236,7 +258,11 @@ class Board:
     def draw_cell_borders(self, screen):
         for row in range(self.rows):
             for col in range(self.cols):
-                pygame.draw.rect(screen, pygame.Color("white"), (self.rect.y + col * self.cell_size, self.rect.x + row * self.cell_size, self.cell_size, self.cell_size), 1)
+                draw_rect(screen, pygame.Color("white"),
+                          pygame.Rect(self.rect.y + col * self.cell_size,
+                                      self.rect.x + row * self.cell_size,
+                                      self.cell_size, self.cell_size), 1)
+                # pygame.draw.rect(screen, pygame.Color("white"), (self.rect.y + col * self.cell_size, self.rect.x + row * self.cell_size, self.cell_size, self.cell_size), 1)
 
     def render(self, screen):
         pygame.draw.rect(screen, ColorPicker.COLORS[self.selectedColor], self.rect, 5)

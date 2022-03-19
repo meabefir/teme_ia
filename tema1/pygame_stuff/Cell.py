@@ -1,6 +1,7 @@
 import pygame
 import copy
 from .ColorPicker import ColorPicker
+from .pygame_wrapper import draw_rect
 
 class Cell:
 
@@ -32,9 +33,10 @@ class Cell:
 
     def render(self, screen):
         if self.value == '#':
-            pygame.draw.rect(screen, pygame.Color(92, 62, 30), self.rect)
-            return
+            # pygame.draw.rect(screen, pygame.Color(92, 62, 30), self.rect)
+            draw_rect(screen, pygame.Color(92, 62, 30), self.rect)
         elif self.value == '.':
             return
         else:
-            pygame.draw.rect(screen, ColorPicker.COLORS[self.value], self.rect)
+            # pygame.draw.rect(screen, ColorPicker.COLORS[self.value], self.rect)
+            draw_rect(screen, ColorPicker.COLORS[self.value], self.rect)

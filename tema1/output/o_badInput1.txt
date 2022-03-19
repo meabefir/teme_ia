@@ -1,0 +1,2 @@
+Input file badInput1.txt does not have valid data
+Reason: too few rows or cols

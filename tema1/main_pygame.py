@@ -1,4 +1,5 @@
 import pygame
+import copy
 
 pygame.init()
 
@@ -6,8 +7,10 @@ from pygame_stuff.Game import Game
 
 screen = pygame.display.set_mode([500, 500])
 
-# game = Game(file="../input/input0.txt")
-game = Game(rows=8, cols=8)
+initialGame = Game(file="../input/input6.txt")
+# game = Game(file="../input/klotskiez.txt")
+# game = Game(rows=4, cols=5)
+game = copy.deepcopy(initialGame)
 clock = pygame.time.Clock()
 
 running = True
@@ -21,7 +24,7 @@ while running:
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_r:
-                game = Game()
+                game = copy.deepcopy(initialGame)
 
     # Fill the background with white
     screen.fill((0, 0, 0))

@@ -1,0 +1,2 @@
+Input file badInput2.txt does not have valid data
+Reason: special piece not found

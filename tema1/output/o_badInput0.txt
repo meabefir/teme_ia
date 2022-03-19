@@ -1,0 +1,2 @@
+Input file badInput0.txt does not have valid data
+Reason: board is not rectangular
