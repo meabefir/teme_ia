@@ -2,6 +2,13 @@ import copy
 from pprint import pprint
 
 class Piece:
+    """
+        Clasa care incapsuleaza o piesa de pe tabla
+
+            board = matricea tablei de joc
+            blocks = blocurile din care e formata
+            name = simbolul
+        """
     def __init__(self, board, blocks, name):
         self.board = board
         self.blocks = blocks
@@ -10,25 +17,43 @@ class Piece:
         self.reset()
 
     def reset(self):
-        # bounding box, nu stiu inca daca imi trebuie dar se pare ca da
+        """
+            reseteaza "cutia" in care se afla piesa
+        """
         self.bbrow1 = min([el[0] for el in self.blocks])
         self.bbrow2 = max([el[0] for el in self.blocks])
         self.bbcol1 = min([el[1] for el in self.blocks])
         self.bbcol2 = max([el[1] for el in self.blocks])
 
     def getBBString(self):
+        # just for testing
         ret = f'{self.bbrow1} {self.bbcol1} {self.bbrow2} {self.bbcol2}'
         return ret
 
     def getBB(self):
+        """
+    Returns:
+        coordonatele "cutiei" in care se incadreaza piesa
+    """
         return self.bbrow1, self.bbcol1, self.bbrow2, self.bbcol2
 
     def getCost(self):
+        """
+            Returns:
+                costul de a misca piesa
+            """
         if self.name == '*':
             return 1
         return len(self.blocks)
 
     def move(self, dir):
+        """
+            functie care muta piesa intr-o anumita directie
+            Args:
+                dir: directia in care sa se mute piesa
+            Returns:
+                un nou obiect Piece care este mutat in directia ceruta
+            """
         d_row, d_col = 0, 0
         if (dir == 's'):
             d_row = 1
@@ -44,6 +69,9 @@ class Piece:
         return Piece(self.board, new_blocks, self.name)
 
     def isOOB(self):
+        """
+            verifica daca "cutia" in care se incadreaza piesa a ajuns in afara tablei
+            """
         return self.bbrow2 < 0 or self.bbrow1 >= len(self.board) or self.bbcol2 < 0 or self.bbcol1 >= len(self.board[0])
 
     def __str__(self):
@@ -69,9 +97,10 @@ dcol = [0, 1, 0, -1]
 
 # informatii despre un nod din arborele de parcurgere (nu din graful initial)
 class NodParcurgere:
-    def __init__(self, board, parinte, info={}, cost=0, h=0, dir=None, movedPiece=None):
+    def __init__(self, board, parinte, info={}, cost=0, h=0, dir=None, movedPiece=None, numar_ordine = 0):
         # matrice care tine tabla
         self.board = board
+        self.numar_ordine = numar_ordine
         self.setTuple()
         self.str = self.setStr()
         self.parinte = parinte  # parintele din arborele de parcurgere
@@ -92,6 +121,7 @@ class NodParcurgere:
             for (col, el) in enumerate(line):
                 if el in dic_piese or el == "#" or el == ".":
                     continue
+                # am intalnit o piesa pe care nu am construit-o inca
                 dic_piese[el] = True
                 self.buildPiece(row, col, visited)
 
@@ -99,6 +129,13 @@ class NodParcurgere:
         self.tup = (tuple(row) for row in self.board)
 
     def buildPiece(self, row, col, visited):
+        """
+            construieste o piesa noua din blocul care se afla la coord row, col
+
+            args:
+                visited: ce elemente din matrice au fost vizitate deja
+                row, col: coordonatele blocului pt care construim piesa
+            """
         el = self.board[row][col]
         q = [(row, col)]
         blocks = []
@@ -122,6 +159,10 @@ class NodParcurgere:
         self.info[el] = Piece(self.board, blocks, el)
 
     def canMovePiece(self, piece, dir):
+        """
+            verifica si returneaza daca piesa "piece" poate fi mutata in directia "dir"
+            acum cand scriu asta imi dau seama ca trebuia pusa in clasa Piece
+            """
         d_row, d_col = 0, 0
         if (dir == 's'):
             d_row = 1
@@ -151,10 +192,12 @@ class NodParcurgere:
                     return False
                 if self.board[new_row][new_col] != '.' and self.board[new_row][new_col] != piece.name:
                     return False
-        # print(f'can move {piece.name} to {dir}\n')
         return True
 
     def movePiece(self, piece, dir):
+        """
+            muta piesa piece in directia dir
+            """
         d_row, d_col = 0, 0
         if dir == 's':
             d_row = 1
@@ -193,6 +236,10 @@ class NodParcurgere:
         return ret
 
     def isScope(self):
+        """
+            functia de verificare scop
+            piesa speciala sa fie "out of bounds"
+            """
         return self.info['*'].isOOB()
 
     def obtineDrum(self):
@@ -204,6 +251,7 @@ class NodParcurgere:
         return l
 
     def getSolutionMoves(self):
+        # returneaza mutarile intr-un format care poate fi inteles de implementarea grafica a problemei
         ret = []
         l = self.obtineDrum()
         for nod in l:
@@ -213,6 +261,7 @@ class NodParcurgere:
         return ret
 
     def strAfisDrum(self, afisCost=True, afisLung=True):
+        # folosita pt scriere in fisier
         l = self.obtineDrum()
         ret = ""
         if afisCost:
@@ -274,6 +323,7 @@ class NodParcurgere:
         if self.movedPiece is not None:
             ret += f'Moved {self.movedPiece} to {dir_map[self.dir]}\n'
         ret += "h: " + str(self.h) + "\n"
+        ret += f"numar ordine: {self.numar_ordine}\n"
         ret += self.str + "\n"
         # for (key, value) in self.info.items():
         # 	ret += str(value)
@@ -283,7 +333,10 @@ class NodParcurgere:
 class Graph:  # graful problemei
     def __init__(self, nume_fisier, s=""):
         self.coordsExit = []
+        self.noduri_generate = 1
+        self.noduri_maxim = 0
 
+        # daca primeste nume de fisier, citeste din acesta, altfel primeste un string input (folosit in partea grafica)
         continutFisier = ""
         if nume_fisier is not None:
             f = open(nume_fisier, 'r')
@@ -295,6 +348,7 @@ class Graph:  # graful problemei
 
         self.start = [[el for el in line] for line in continutFisier.split("\n")]
 
+        # pastrez coordonatele pe unde se poate iesi
         # caut pe borduri unde e portita
         for i in range(len(self.start[0])):
             if self.start[0][i] == '.':
@@ -310,6 +364,7 @@ class Graph:  # graful problemei
         print("Stare Initiala:\n")
         pprint(self.start)
 
+        # calcuez bounding box pt iesire
         self.exit_bbrow1 = float("inf")
         self.exit_bbcol1 = float("inf")
         self.exit_bbrow2 = 0
@@ -328,8 +383,10 @@ class Graph:  # graful problemei
     def testeaza_scop(self, nodCurent):
         return nodCurent.isScope()
 
-    # va genera succesorii sub forma de noduri in arborele de parcurgere
     def genereazaSuccesori(self, nodCurent: NodParcurgere, tip_euristica="euristica banala"):
+        """
+            pentru fiecare piesa, creeaza cate un NodParcurgere pt fiecare directie in care se poate deplasa
+            """
         dirs = ['n', 's', 'e', 'w']
         listaSucc = []
         for (name, piece) in nodCurent.info.items():
@@ -342,7 +399,8 @@ class Graph:  # graful problemei
                 if nodCurent.contineInDrum(new_board):
                     continue
                 nod_nou = NodParcurgere(new_board, nodCurent, new_info, nodCurent.g + move_cost,
-                                        self.calculeaza_h(nodCurent, tip_euristica), dir=dir, movedPiece=name)
+                                        self.calculeaza_h(nodCurent, tip_euristica), dir=dir, movedPiece=name, numar_ordine=self.noduri_generate)
+                self.noduri_generate += 1
                 listaSucc.append(nod_nou)
         return listaSucc
 
@@ -353,23 +411,10 @@ class Graph:  # graful problemei
         elif tip_euristica == "euristica admisibila 1":
             return self.manhatan(nod)
 
-        elif tip_euristica == "euristica neadmisibila 1":
-            # adun catva la euristica pt fiecare pozitie in care nu se poate misca piesa speciala
-            h = 0
-            inc = 1
-            dirs = ['s', 'n', 'e', 'w']
-            for dir in dirs:
-                if not nod.canMovePiece(nod.info['*'], dir):
-                    h += inc
-            return inc
-
-        elif tip_euristica == "euristica neadmisibila 2":
-            # prioritizam mutarea piesei speciale
-            return nod.info[nod.movedPiece].getCost() * 1 if nod.movedPiece not in [None, '*'] else 1
-
-        elif tip_euristica == "euristica neadmisibila 3":
-            # verific daca exista cale libera pana la exit si ce blocuri am intalnit pana acolo
-            # numar de asemenea cate spatii libere sunt accesibile de catre piesa speciala
+        elif tip_euristica == "euristica admisibila 2":
+            # verific daca exista cale libera pana la exit
+            # daca da, returnez distanta manhattan
+            # daca nu, ret distanta manhattan + costul celei mai ieftine piese intalnite
             met = {}
             viz = [[False for i in range(len(nod.board[0]))] for j in range(len(nod.board))]
             q = []
@@ -381,7 +426,6 @@ class Graph:  # graful problemei
                 q += ((block[0], block[1]),)
                 viz[block[0]][block[1]] = True
 
-            blocuri_total = (len(nod.board)-2) * (len(nod.board[0])-2)
             accesibile = 0
             found = False
             while len(q):
@@ -413,6 +457,21 @@ class Graph:  # graful problemei
                 prices = [nod.info[name].getCost() for name in met.keys()]
                 return self.manhatan(nod) + (min(prices) if len(prices) else 0)
 
+        elif tip_euristica == "euristica neadmisibila 1":
+            # adun catva la euristica pt fiecare pozitie in care nu se poate misca piesa speciala
+            h = 0
+            inc = 1
+            dirs = ['s', 'n', 'e', 'w']
+            for dir in dirs:
+                if not nod.canMovePiece(nod.info['*'], dir):
+                    h += inc
+            return h
+
+        elif tip_euristica == "euristica neadmisibila 2":
+            # prioritizam mutarea piesei speciale
+            return nod.info[nod.movedPiece].getCost() * 10 if nod.movedPiece not in [None, '*'] else 1
+
+
     def manhatan(self, nod):
         # manhatan distance
         piesa_speciala = nod.info['*']
@@ -427,6 +486,8 @@ class Graph:  # graful problemei
         deltaRow = deltaCol = 0
         startRow, startCol, finalRow, finalCol = piesa_speciala.getBB()
 
+        if len(self.coordsExit) == 0:
+            return 1
         if self.coordsExit[0][0] == 0:  # iesirea e sus
             deltaRow = finalRow
             deltaCol = min(abs(finalCol - self.exit_bbcol2), abs(startCol - self.exit_bbcol1))

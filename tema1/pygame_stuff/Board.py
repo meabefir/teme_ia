@@ -17,6 +17,7 @@ from dfi import dfi
 
 class Board:
     def __init__(self, pos, rows, cols, width=200):
+        self.moveDuration = 10
         self.cell_size = width / cols
         height = self.cell_size * rows
         self.rect = pygame.Rect(pos[0], pos[1], width, height)
@@ -152,17 +153,21 @@ class Board:
         # moves = bfs(graph, 1, timeout=_timeout)
         # moves = dfs(graph, 1, timeout=_timeout)
         # moves = dfi(graph, 1, timeout=_timeout)
-        moves = a_star(graph, 1, "euristica admisibila 1", timeout=_timeout)
+        moves = a_star(graph, 1, "euristica admisibila 2", timeout=_timeout)
+        # moves = a_star(graph, 1, "euristica neadmisibila 1", timeout=_timeout)
         # moves = a_star_opt(graph, 1, "euristica admisibila 1", timeout=_timeout)
         # moves = ida_star_noprint(graph, 1, "euristica admisibila 1", timeout=_timeout)
 
         print("moves ", moves)
+        if moves is None:
+            print("no solution")
+            return
         if not moves:
             return
         if isinstance(moves, str):
             return
         for move in moves:
-            self.moves.append(PieceMove(self, self.pieces[rev_dic[move[0]]], move[1], 3))
+            self.moves.append(PieceMove(self, self.pieces[rev_dic[move[0]]], move[1], self.moveDuration))
         self.animate()
 
     def handleEvent(self, event):

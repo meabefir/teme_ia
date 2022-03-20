@@ -13,9 +13,13 @@ dfs
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.04877424240112305 sec 
+nr noduri generate: 109 
+nr noduri maxim in memorie: 55 
 Cost: 69
 Lungime: 48
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -26,6 +30,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 1
 ##..##
 #.aa.#
 #*.a.#
@@ -36,6 +41,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 4
 ##..##
 #.aa.#
 #..a.#
@@ -46,6 +52,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 10
 ##..##
 #.aa.#
 #..a.#
@@ -56,6 +63,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 15
 ##..##
 #.aa.#
 #.*a.#
@@ -66,6 +74,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 21
 ##aa##
 #..a.#
 #.*..#
@@ -76,6 +85,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 23
 ##aa##
 #.*a.#
 #.**.#
@@ -86,6 +96,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 27
 ##aa##
 #*.a.#
 #**..#
@@ -96,6 +107,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 28
 ##aa##
 #..a.#
 #*...#
@@ -106,6 +118,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 29
 ##aa##
 #..a.#
 #....#
@@ -116,6 +129,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 30
 ##aa##
 #..a.#
 #....#
@@ -126,6 +140,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 31
 ##aa##
 #..a.#
 #....#
@@ -136,6 +151,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 33
 ##..##
 #.aa.#
 #..a.#
@@ -146,6 +162,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 34
 ##..##
 #..aa#
 #...a#
@@ -156,6 +173,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 36
 ##..##
 #..aa#
 #..*a#
@@ -166,6 +184,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 39
 ##..##
 #..aa#
 #.*.a#
@@ -176,6 +195,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 40
 ##..##
 #.*aa#
 #.**a#
@@ -186,6 +206,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 44
 ##..##
 #*.aa#
 #**.a#
@@ -196,6 +217,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 45
 ##..##
 #..aa#
 #*..a#
@@ -206,6 +228,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 47
 ##..##
 #..aa#
 #...a#
@@ -216,6 +239,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 49
 ##..##
 #..aa#
 #...a#
@@ -226,6 +250,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 51
 ##..##
 #....#
 #..aa#
@@ -236,6 +261,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 52
 ##..##
 #....#
 #.*aa#
@@ -246,6 +272,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 57
 ##..##
 #....#
 #*.aa#
@@ -256,6 +283,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 58
 ##..##
 #*...#
 #**aa#
@@ -266,6 +294,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 62
 ##..##
 #*...#
 #**..#
@@ -276,6 +305,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 63
 ##..##
 #....#
 #*...#
@@ -286,6 +316,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 66
 ##..##
 #....#
 #....#
@@ -296,6 +327,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 68
 ##..##
 #....#
 #..aa#
@@ -306,6 +338,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 70
 ##..##
 #....#
 #.aa.#
@@ -316,6 +349,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 74
 ##..##
 #....#
 #aa..#
@@ -326,6 +360,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 75
 ##..##
 #aa..#
 #.a..#
@@ -336,6 +371,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 77
 ##..##
 #aa..#
 #.a..#
@@ -346,6 +382,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 78
 ##..##
 #aa..#
 #.a..#
@@ -356,6 +393,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 79
 ##..##
 #aa..#
 #.a*.#
@@ -366,6 +404,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 81
 ##..##
 #aa*.#
 #.a**#
@@ -376,6 +415,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 83
 ##.*##
 #aa**#
 #.a..#
@@ -386,6 +426,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 85
 ##.*##
 #..**#
 #aa..#
@@ -396,6 +437,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 86
 ##..##
 #..*.#
 #aa**#
@@ -406,6 +448,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 90
 ##..##
 #....#
 #aa*.#
@@ -416,6 +459,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 92
 ##..##
 #....#
 #aa..#
@@ -426,6 +470,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 94
 ##..##
 #....#
 #....#
@@ -436,6 +481,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 95
 ##..##
 #....#
 #..*.#
@@ -446,6 +492,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 96
 ##..##
 #..*.#
 #..**#
@@ -456,6 +503,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 97
 ##.*##
 #..**#
 #....#
@@ -466,6 +514,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 100
 ##*.##
 #.**.#
 #....#
@@ -476,6 +525,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 102
 ##**##
 #....#
 #....#
@@ -486,6 +536,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 106
 ##..##
 #....#
 #....#
@@ -501,9 +552,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.08093976974487305 sec 
+nr noduri generate: 111 
+nr noduri maxim in memorie: 56 
 Cost: 72
 Lungime: 49
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -514,6 +569,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 1
 ##..##
 #.aa.#
 #*.a.#
@@ -524,6 +580,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 4
 ##..##
 #.aa.#
 #..a.#
@@ -534,6 +591,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 10
 ##..##
 #.aa.#
 #..a.#
@@ -544,6 +602,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 15
 ##..##
 #.aa.#
 #.*a.#
@@ -554,6 +613,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 21
 ##aa##
 #..a.#
 #.*..#
@@ -564,6 +624,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 23
 ##aa##
 #.*a.#
 #.**.#
@@ -574,6 +635,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 27
 ##aa##
 #*.a.#
 #**..#
@@ -584,6 +646,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 28
 ##aa##
 #..a.#
 #*...#
@@ -594,6 +657,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 29
 ##aa##
 #..a.#
 #....#
@@ -604,6 +668,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 30
 ##aa##
 #..a.#
 #....#
@@ -614,6 +679,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 31
 ##aa##
 #..a.#
 #....#
@@ -624,6 +690,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 33
 ##..##
 #.aa.#
 #..a.#
@@ -634,6 +701,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 34
 ##..##
 #..aa#
 #...a#
@@ -644,6 +712,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 36
 ##..##
 #..aa#
 #..*a#
@@ -654,6 +723,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 39
 ##..##
 #..aa#
 #.*.a#
@@ -664,6 +734,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 40
 ##..##
 #.*aa#
 #.**a#
@@ -674,6 +745,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 44
 ##..##
 #*.aa#
 #**.a#
@@ -684,6 +756,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 45
 ##..##
 #..aa#
 #*..a#
@@ -694,6 +767,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 47
 ##..##
 #..aa#
 #...a#
@@ -704,6 +778,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 49
 ##..##
 #..aa#
 #...a#
@@ -714,6 +789,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 51
 ##..##
 #....#
 #..aa#
@@ -724,6 +800,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 52
 ##..##
 #....#
 #.*aa#
@@ -734,6 +811,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 57
 ##..##
 #....#
 #*.aa#
@@ -744,6 +822,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 58
 ##..##
 #*...#
 #**aa#
@@ -754,6 +833,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 62
 ##..##
 #*...#
 #**..#
@@ -764,6 +844,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 63
 ##..##
 #....#
 #*...#
@@ -774,6 +855,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 66
 ##..##
 #....#
 #....#
@@ -784,6 +866,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 68
 ##..##
 #....#
 #..aa#
@@ -794,6 +877,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 70
 ##..##
 #....#
 #.aa.#
@@ -804,6 +888,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 74
 ##..##
 #....#
 #aa..#
@@ -814,6 +899,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 75
 ##..##
 #aa..#
 #.a..#
@@ -824,6 +910,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 77
 ##..##
 #aa..#
 #.a..#
@@ -834,6 +921,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 78
 ##..##
 #aa..#
 #.a..#
@@ -844,6 +932,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 79
 ##..##
 #aa..#
 #.a*.#
@@ -854,6 +943,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 81
 ##..##
 #aa*.#
 #.a**#
@@ -864,6 +954,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 83
 ##.*##
 #aa**#
 #.a..#
@@ -874,6 +965,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 85
 ##.*##
 #..**#
 #aa..#
@@ -884,6 +976,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 86
 ##..##
 #..*.#
 #aa**#
@@ -894,6 +987,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 90
 ##..##
 #....#
 #aa*.#
@@ -904,6 +998,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 92
 ##..##
 #....#
 #aa..#
@@ -914,6 +1009,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 94
 ##..##
 #....#
 #....#
@@ -924,6 +1020,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 95
 ##..##
 #....#
 #..*.#
@@ -934,6 +1031,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 96
 ##..##
 #..*.#
 #..**#
@@ -944,6 +1042,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 97
 ##.*##
 #..**#
 #....#
@@ -954,6 +1053,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 100
 ##*.##
 #.**.#
 #....#
@@ -964,6 +1064,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 102
 ##**##
 #....#
 #....#
@@ -974,6 +1075,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 106
 ##..##
 #....#
 #....#
@@ -984,6 +1086,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 109
 ##..##
 #....#
 #aa..#
@@ -999,9 +1102,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.11561131477355957 sec 
+nr noduri generate: 126 
+nr noduri maxim in memorie: 66 
 Cost: 79
 Lungime: 54
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -1012,6 +1119,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 1
 ##..##
 #.aa.#
 #*.a.#
@@ -1022,6 +1130,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 4
 ##..##
 #.aa.#
 #..a.#
@@ -1032,6 +1141,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 10
 ##..##
 #.aa.#
 #..a.#
@@ -1042,6 +1152,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 15
 ##..##
 #.aa.#
 #.*a.#
@@ -1052,6 +1163,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 21
 ##aa##
 #..a.#
 #.*..#
@@ -1062,6 +1174,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 23
 ##aa##
 #.*a.#
 #.**.#
@@ -1072,6 +1185,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 27
 ##aa##
 #*.a.#
 #**..#
@@ -1082,6 +1196,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 28
 ##aa##
 #..a.#
 #*...#
@@ -1092,6 +1207,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 29
 ##aa##
 #..a.#
 #....#
@@ -1102,6 +1218,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 30
 ##aa##
 #..a.#
 #....#
@@ -1112,6 +1229,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 31
 ##aa##
 #..a.#
 #....#
@@ -1122,6 +1240,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 33
 ##..##
 #.aa.#
 #..a.#
@@ -1132,6 +1251,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 34
 ##..##
 #..aa#
 #...a#
@@ -1142,6 +1262,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 36
 ##..##
 #..aa#
 #..*a#
@@ -1152,6 +1273,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 39
 ##..##
 #..aa#
 #.*.a#
@@ -1162,6 +1284,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 40
 ##..##
 #.*aa#
 #.**a#
@@ -1172,6 +1295,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 44
 ##..##
 #*.aa#
 #**.a#
@@ -1182,6 +1306,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 45
 ##..##
 #..aa#
 #*..a#
@@ -1192,6 +1317,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 47
 ##..##
 #..aa#
 #...a#
@@ -1202,6 +1328,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 49
 ##..##
 #..aa#
 #...a#
@@ -1212,6 +1339,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 51
 ##..##
 #....#
 #..aa#
@@ -1222,6 +1350,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 52
 ##..##
 #....#
 #.*aa#
@@ -1232,6 +1361,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 57
 ##..##
 #....#
 #*.aa#
@@ -1242,6 +1372,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 58
 ##..##
 #*...#
 #**aa#
@@ -1252,6 +1383,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 62
 ##..##
 #*...#
 #**..#
@@ -1262,6 +1394,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 63
 ##..##
 #....#
 #*...#
@@ -1272,6 +1405,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 66
 ##..##
 #....#
 #....#
@@ -1282,6 +1416,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 68
 ##..##
 #....#
 #..aa#
@@ -1292,6 +1427,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 70
 ##..##
 #....#
 #.aa.#
@@ -1302,6 +1438,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 74
 ##..##
 #....#
 #aa..#
@@ -1312,6 +1449,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 75
 ##..##
 #aa..#
 #.a..#
@@ -1322,6 +1460,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 77
 ##..##
 #aa..#
 #.a..#
@@ -1332,6 +1471,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 78
 ##..##
 #aa..#
 #.a..#
@@ -1342,6 +1482,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 79
 ##..##
 #aa..#
 #.a*.#
@@ -1352,6 +1493,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 81
 ##..##
 #aa*.#
 #.a**#
@@ -1362,6 +1504,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 83
 ##.*##
 #aa**#
 #.a..#
@@ -1372,6 +1515,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 85
 ##.*##
 #..**#
 #aa..#
@@ -1382,6 +1526,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 86
 ##..##
 #..*.#
 #aa**#
@@ -1392,6 +1537,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 90
 ##..##
 #....#
 #aa*.#
@@ -1402,6 +1548,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 92
 ##..##
 #....#
 #aa..#
@@ -1412,6 +1559,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 94
 ##..##
 #....#
 #....#
@@ -1422,6 +1570,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 95
 ##..##
 #....#
 #..*.#
@@ -1432,6 +1581,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 96
 ##..##
 #..*.#
 #..**#
@@ -1442,6 +1592,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 97
 ##.*##
 #..**#
 #....#
@@ -1452,6 +1603,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 100
 ##*.##
 #.**.#
 #....#
@@ -1462,6 +1614,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 102
 ##**##
 #....#
 #....#
@@ -1472,6 +1625,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 106
 ##..##
 #....#
 #....#
@@ -1482,6 +1636,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 109
 ##..##
 #....#
 #aa..#
@@ -1492,6 +1647,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 111
 ##**##
 #....#
 #aa..#
@@ -1502,6 +1658,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 114
 ##*.##
 #.**.#
 #aa..#
@@ -1512,6 +1669,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 117
 ##*.##
 #.**.#
 #.aa.#
@@ -1522,6 +1680,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 118
 ##**##
 #....#
 #.aa.#
@@ -1532,6 +1691,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 122
 ##..##
 #....#
 #.aa.#
@@ -1547,9 +1707,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.1465296745300293 sec 
+nr noduri generate: 129 
+nr noduri maxim in memorie: 68 
 Cost: 82
 Lungime: 55
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -1560,6 +1724,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 1
 ##..##
 #.aa.#
 #*.a.#
@@ -1570,6 +1735,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 4
 ##..##
 #.aa.#
 #..a.#
@@ -1580,6 +1746,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 10
 ##..##
 #.aa.#
 #..a.#
@@ -1590,6 +1757,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 15
 ##..##
 #.aa.#
 #.*a.#
@@ -1600,6 +1768,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 21
 ##aa##
 #..a.#
 #.*..#
@@ -1610,6 +1779,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 23
 ##aa##
 #.*a.#
 #.**.#
@@ -1620,6 +1790,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 27
 ##aa##
 #*.a.#
 #**..#
@@ -1630,6 +1801,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 28
 ##aa##
 #..a.#
 #*...#
@@ -1640,6 +1812,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 29
 ##aa##
 #..a.#
 #....#
@@ -1650,6 +1823,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 30
 ##aa##
 #..a.#
 #....#
@@ -1660,6 +1834,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 31
 ##aa##
 #..a.#
 #....#
@@ -1670,6 +1845,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 33
 ##..##
 #.aa.#
 #..a.#
@@ -1680,6 +1856,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 34
 ##..##
 #..aa#
 #...a#
@@ -1690,6 +1867,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 36
 ##..##
 #..aa#
 #..*a#
@@ -1700,6 +1878,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 39
 ##..##
 #..aa#
 #.*.a#
@@ -1710,6 +1889,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 40
 ##..##
 #.*aa#
 #.**a#
@@ -1720,6 +1900,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 44
 ##..##
 #*.aa#
 #**.a#
@@ -1730,6 +1911,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 45
 ##..##
 #..aa#
 #*..a#
@@ -1740,6 +1922,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 47
 ##..##
 #..aa#
 #...a#
@@ -1750,6 +1933,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 49
 ##..##
 #..aa#
 #...a#
@@ -1760,6 +1944,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 51
 ##..##
 #....#
 #..aa#
@@ -1770,6 +1955,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 52
 ##..##
 #....#
 #.*aa#
@@ -1780,6 +1966,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 57
 ##..##
 #....#
 #*.aa#
@@ -1790,6 +1977,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 58
 ##..##
 #*...#
 #**aa#
@@ -1800,6 +1988,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 62
 ##..##
 #*...#
 #**..#
@@ -1810,6 +1999,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 63
 ##..##
 #....#
 #*...#
@@ -1820,6 +2010,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 66
 ##..##
 #....#
 #....#
@@ -1830,6 +2021,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 68
 ##..##
 #....#
 #..aa#
@@ -1840,6 +2032,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 70
 ##..##
 #....#
 #.aa.#
@@ -1850,6 +2043,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 74
 ##..##
 #....#
 #aa..#
@@ -1860,6 +2054,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 75
 ##..##
 #aa..#
 #.a..#
@@ -1870,6 +2065,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 77
 ##..##
 #aa..#
 #.a..#
@@ -1880,6 +2076,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 78
 ##..##
 #aa..#
 #.a..#
@@ -1890,6 +2087,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 79
 ##..##
 #aa..#
 #.a*.#
@@ -1900,6 +2098,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 81
 ##..##
 #aa*.#
 #.a**#
@@ -1910,6 +2109,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 83
 ##.*##
 #aa**#
 #.a..#
@@ -1920,6 +2120,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 85
 ##.*##
 #..**#
 #aa..#
@@ -1930,6 +2131,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 86
 ##..##
 #..*.#
 #aa**#
@@ -1940,6 +2142,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 90
 ##..##
 #....#
 #aa*.#
@@ -1950,6 +2153,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 92
 ##..##
 #....#
 #aa..#
@@ -1960,6 +2164,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 94
 ##..##
 #....#
 #....#
@@ -1970,6 +2175,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 95
 ##..##
 #....#
 #..*.#
@@ -1980,6 +2186,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 96
 ##..##
 #..*.#
 #..**#
@@ -1990,6 +2197,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 97
 ##.*##
 #..**#
 #....#
@@ -2000,6 +2208,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 100
 ##*.##
 #.**.#
 #....#
@@ -2010,6 +2219,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 102
 ##**##
 #....#
 #....#
@@ -2020,6 +2230,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 106
 ##..##
 #....#
 #....#
@@ -2030,6 +2241,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 109
 ##..##
 #....#
 #aa..#
@@ -2040,6 +2252,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 111
 ##**##
 #....#
 #aa..#
@@ -2050,6 +2263,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 114
 ##*.##
 #.**.#
 #aa..#
@@ -2060,6 +2274,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 117
 ##*.##
 #.**.#
 #.aa.#
@@ -2070,6 +2285,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 118
 ##**##
 #....#
 #.aa.#
@@ -2080,6 +2296,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 122
 ##..##
 #....#
 #.aa.#
@@ -2090,6 +2307,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 126
 ##..##
 #.aa.#
 #..a.#
@@ -2105,9 +2323,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.1754753589630127 sec 
+nr noduri generate: 137 
+nr noduri maxim in memorie: 73 
 Cost: 87
 Lungime: 58
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -2118,6 +2340,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 1
 ##..##
 #.aa.#
 #*.a.#
@@ -2128,6 +2351,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 4
 ##..##
 #.aa.#
 #..a.#
@@ -2138,6 +2362,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 10
 ##..##
 #.aa.#
 #..a.#
@@ -2148,6 +2373,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 15
 ##..##
 #.aa.#
 #.*a.#
@@ -2158,6 +2384,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 21
 ##aa##
 #..a.#
 #.*..#
@@ -2168,6 +2395,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 23
 ##aa##
 #.*a.#
 #.**.#
@@ -2178,6 +2406,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 27
 ##aa##
 #*.a.#
 #**..#
@@ -2188,6 +2417,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 28
 ##aa##
 #..a.#
 #*...#
@@ -2198,6 +2428,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 29
 ##aa##
 #..a.#
 #....#
@@ -2208,6 +2439,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 30
 ##aa##
 #..a.#
 #....#
@@ -2218,6 +2450,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 31
 ##aa##
 #..a.#
 #....#
@@ -2228,6 +2461,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 33
 ##..##
 #.aa.#
 #..a.#
@@ -2238,6 +2472,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 34
 ##..##
 #..aa#
 #...a#
@@ -2248,6 +2483,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 36
 ##..##
 #..aa#
 #..*a#
@@ -2258,6 +2494,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 39
 ##..##
 #..aa#
 #.*.a#
@@ -2268,6 +2505,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 40
 ##..##
 #.*aa#
 #.**a#
@@ -2278,6 +2516,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 44
 ##..##
 #*.aa#
 #**.a#
@@ -2288,6 +2527,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 45
 ##..##
 #..aa#
 #*..a#
@@ -2298,6 +2538,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 47
 ##..##
 #..aa#
 #...a#
@@ -2308,6 +2549,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 49
 ##..##
 #..aa#
 #...a#
@@ -2318,6 +2560,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 51
 ##..##
 #....#
 #..aa#
@@ -2328,6 +2571,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 52
 ##..##
 #....#
 #.*aa#
@@ -2338,6 +2582,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 57
 ##..##
 #....#
 #*.aa#
@@ -2348,6 +2593,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 58
 ##..##
 #*...#
 #**aa#
@@ -2358,6 +2604,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 62
 ##..##
 #*...#
 #**..#
@@ -2368,6 +2615,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 63
 ##..##
 #....#
 #*...#
@@ -2378,6 +2626,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 66
 ##..##
 #....#
 #....#
@@ -2388,6 +2637,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 68
 ##..##
 #....#
 #..aa#
@@ -2398,6 +2648,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 70
 ##..##
 #....#
 #.aa.#
@@ -2408,6 +2659,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 74
 ##..##
 #....#
 #aa..#
@@ -2418,6 +2670,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 75
 ##..##
 #aa..#
 #.a..#
@@ -2428,6 +2681,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 77
 ##..##
 #aa..#
 #.a..#
@@ -2438,6 +2692,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 78
 ##..##
 #aa..#
 #.a..#
@@ -2448,6 +2703,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 79
 ##..##
 #aa..#
 #.a*.#
@@ -2458,6 +2714,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 81
 ##..##
 #aa*.#
 #.a**#
@@ -2468,6 +2725,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 83
 ##.*##
 #aa**#
 #.a..#
@@ -2478,6 +2736,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 85
 ##.*##
 #..**#
 #aa..#
@@ -2488,6 +2747,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 86
 ##..##
 #..*.#
 #aa**#
@@ -2498,6 +2758,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 90
 ##..##
 #....#
 #aa*.#
@@ -2508,6 +2769,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 92
 ##..##
 #....#
 #aa..#
@@ -2518,6 +2780,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 94
 ##..##
 #....#
 #....#
@@ -2528,6 +2791,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 95
 ##..##
 #....#
 #..*.#
@@ -2538,6 +2802,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 96
 ##..##
 #..*.#
 #..**#
@@ -2548,6 +2813,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 97
 ##.*##
 #..**#
 #....#
@@ -2558,6 +2824,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 100
 ##*.##
 #.**.#
 #....#
@@ -2568,6 +2835,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 102
 ##**##
 #....#
 #....#
@@ -2578,6 +2846,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 106
 ##..##
 #....#
 #....#
@@ -2588,6 +2857,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 109
 ##..##
 #....#
 #aa..#
@@ -2598,6 +2868,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 111
 ##**##
 #....#
 #aa..#
@@ -2608,6 +2879,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 114
 ##*.##
 #.**.#
 #aa..#
@@ -2618,6 +2890,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 117
 ##*.##
 #.**.#
 #.aa.#
@@ -2628,6 +2901,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 118
 ##**##
 #....#
 #.aa.#
@@ -2638,6 +2912,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 122
 ##..##
 #....#
 #.aa.#
@@ -2648,6 +2923,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 126
 ##..##
 #.aa.#
 #..a.#
@@ -2658,6 +2934,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 129
 ##**##
 #.aa.#
 #..a.#
@@ -2668,6 +2945,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 133
 ##**##
 #..aa#
 #...a#
@@ -2678,6 +2956,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 135
 ##..##
 #..aa#
 #...a#
@@ -2701,9 +2980,13 @@ bfs
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 1.6435763835906982 sec 
+nr noduri generate: 12090 
+nr noduri maxim in memorie: 8261 
 Cost: 13
 Lungime: 8
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -2714,6 +2997,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -2724,6 +3008,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 14
 ##..##
 #*...#
 #**aa#
@@ -2734,6 +3019,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 43
 ##..##
 #*...#
 #**..#
@@ -2744,6 +3030,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 157
 ##..##
 #.*..#
 #.**.#
@@ -2754,6 +3041,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 437
 ##*.##
 #.**.#
 #....#
@@ -2764,6 +3052,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 1497
 ##**##
 #....#
 #....#
@@ -2774,6 +3063,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 3828
 ##..##
 #....#
 #....#
@@ -2789,9 +3079,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 4.569755554199219 sec 
+nr noduri generate: 28719 
+nr noduri maxim in memorie: 16628 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -2802,6 +3096,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -2812,6 +3107,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 14
 ##..##
 #*...#
 #**aa#
@@ -2822,6 +3118,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 43
 ##..##
 #*...#
 #**..#
@@ -2832,6 +3129,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 157
 ##..##
 #.*..#
 #.**.#
@@ -2842,6 +3140,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 437
 ##*.##
 #.**.#
 #....#
@@ -2852,6 +3151,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 1497
 ##**##
 #....#
 #....#
@@ -2862,6 +3162,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 3828
 ##..##
 #....#
 #....#
@@ -2872,6 +3173,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 12090
 ##..##
 #....#
 #..aa#
@@ -2887,9 +3189,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 4.576735496520996 sec 
+nr noduri generate: 28722 
+nr noduri maxim in memorie: 16630 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -2900,6 +3206,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -2910,6 +3217,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 14
 ##..##
 #*...#
 #**aa#
@@ -2920,6 +3228,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 43
 ##..##
 #*...#
 #**..#
@@ -2930,6 +3239,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 157
 ##..##
 #.*..#
 #.**.#
@@ -2940,6 +3250,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 437
 ##*.##
 #.**.#
 #....#
@@ -2950,6 +3261,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 1497
 ##**##
 #....#
 #....#
@@ -2960,6 +3272,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 3828
 ##..##
 #....#
 #....#
@@ -2970,6 +3283,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 12091
 ##..##
 #....#
 #....#
@@ -2985,9 +3299,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 4.582719564437866 sec 
+nr noduri generate: 28725 
+nr noduri maxim in memorie: 16632 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -2998,6 +3316,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -3008,6 +3327,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 14
 ##..##
 #*...#
 #**aa#
@@ -3018,6 +3338,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 43
 ##..##
 #*...#
 #**..#
@@ -3028,6 +3349,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 157
 ##..##
 #.*..#
 #.**.#
@@ -3038,6 +3360,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 437
 ##*.##
 #.**.#
 #....#
@@ -3048,6 +3371,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 1497
 ##**##
 #....#
 #....#
@@ -3058,6 +3382,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 3829
 ##**##
 #....#
 #..aa#
@@ -3068,6 +3393,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 12092
 ##..##
 #....#
 #..aa#
@@ -3083,9 +3409,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 4.590699195861816 sec 
+nr noduri generate: 28737 
+nr noduri maxim in memorie: 16640 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -3096,6 +3426,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -3106,6 +3437,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 14
 ##..##
 #*...#
 #**aa#
@@ -3116,6 +3448,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 43
 ##..##
 #*...#
 #**..#
@@ -3126,6 +3459,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 157
 ##..##
 #.*..#
 #.**.#
@@ -3136,6 +3470,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 437
 ##*.##
 #.**.#
 #....#
@@ -3146,6 +3481,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 1497
 ##**##
 #....#
 #....#
@@ -3156,6 +3492,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 3830
 ##**##
 #....#
 #....#
@@ -3166,6 +3503,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 12096
 ##..##
 #....#
 #....#
@@ -3204,9 +3542,13 @@ dfi
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.0468747615814209 sec 
+nr noduri generate: 291 
+nr noduri maxim in memorie: 38 
 Cost: 13
 Lungime: 8
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -3217,6 +3559,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -3227,6 +3570,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 26
 ##..##
 #*...#
 #**aa#
@@ -3237,6 +3581,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 84
 ##..##
 #*...#
 #**..#
@@ -3247,6 +3592,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 182
 ##..##
 #.*..#
 #.**.#
@@ -3257,6 +3603,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 184
 ##*.##
 #.**.#
 #....#
@@ -3267,6 +3614,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 220
 ##**##
 #....#
 #....#
@@ -3277,6 +3625,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 249
 ##..##
 #....#
 #....#
@@ -3292,9 +3641,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.06781864166259766 sec 
+nr noduri generate: 381 
+nr noduri maxim in memorie: 47 
 Cost: 15
 Lungime: 10
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -3305,6 +3658,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -3315,6 +3669,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 26
 ##..##
 #*...#
 #**aa#
@@ -3325,6 +3680,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 84
 ##..##
 #*...#
 #**..#
@@ -3335,6 +3691,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 182
 ##..##
 #.*..#
 #.**.#
@@ -3345,6 +3702,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 185
 ##..##
 #..*.#
 #..**#
@@ -3355,6 +3713,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 218
 ##.*##
 #..**#
 #....#
@@ -3365,6 +3724,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 252
 ##*.##
 #.**.#
 #....#
@@ -3375,6 +3735,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 288
 ##**##
 #....#
 #....#
@@ -3385,6 +3746,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 335
 ##..##
 #....#
 #....#
@@ -3400,9 +3762,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.08477330207824707 sec 
+nr noduri generate: 444 
+nr noduri maxim in memorie: 49 
 Cost: 16
 Lungime: 13
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -3413,6 +3779,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 1
 ##..##
 #.aa.#
 #*.a.#
@@ -3423,6 +3790,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 5
 ##..##
 #.aa.#
 #.*a.#
@@ -3433,6 +3801,7 @@ h: 1
 
 Moved * to v
 h: 1
+numar ordine: 10
 ##..##
 #.aa.#
 #..a.#
@@ -3443,6 +3812,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 18
 ##..##
 #.aa.#
 #..a.#
@@ -3453,6 +3823,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 37
 ##..##
 #aa..#
 #.a..#
@@ -3463,6 +3834,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 126
 ##..##
 #aa..#
 #.a*.#
@@ -3473,6 +3845,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 135
 ##..##
 #aa*.#
 #.a**#
@@ -3483,6 +3856,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 171
 ##.*##
 #aa**#
 #.a..#
@@ -3493,6 +3867,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 191
 ##.*##
 #..**#
 #aa..#
@@ -3503,6 +3878,7 @@ h: 1
 
 Moved * to <
 h: 1
+numar ordine: 310
 ##*.##
 #.**.#
 #aa..#
@@ -3513,6 +3889,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 322
 ##**##
 #....#
 #aa..#
@@ -3523,6 +3900,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 393
 ##..##
 #....#
 #aa..#
@@ -3538,9 +3916,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.0967411994934082 sec 
+nr noduri generate: 473 
+nr noduri maxim in memorie: 50 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -3551,6 +3933,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -3561,6 +3944,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 26
 ##..##
 #*...#
 #**aa#
@@ -3571,6 +3955,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 84
 ##..##
 #*...#
 #**..#
@@ -3581,6 +3966,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 182
 ##..##
 #.*..#
 #.**.#
@@ -3591,6 +3977,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 184
 ##*.##
 #.**.#
 #....#
@@ -3601,6 +3988,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 220
 ##**##
 #....#
 #....#
@@ -3611,6 +3999,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 249
 ##..##
 #....#
 #....#
@@ -3621,6 +4010,7 @@ h: 1
 
 Moved a to <
 h: 1
+numar ordine: 292
 ##..##
 #....#
 #....#
@@ -3636,9 +4026,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.10272550582885742 sec 
+nr noduri generate: 476 
+nr noduri maxim in memorie: 50 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -3649,6 +4043,7 @@ h: 1
 
 Moved a to >
 h: 1
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -3659,6 +4054,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 26
 ##..##
 #*...#
 #**aa#
@@ -3669,6 +4065,7 @@ h: 1
 
 Moved a to v
 h: 1
+numar ordine: 84
 ##..##
 #*...#
 #**..#
@@ -3679,6 +4076,7 @@ h: 1
 
 Moved * to >
 h: 1
+numar ordine: 182
 ##..##
 #.*..#
 #.**.#
@@ -3689,6 +4087,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 184
 ##*.##
 #.**.#
 #....#
@@ -3699,6 +4098,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 220
 ##**##
 #....#
 #....#
@@ -3709,6 +4109,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 249
 ##..##
 #....#
 #....#
@@ -3719,6 +4120,7 @@ h: 1
 
 Moved a to ^
 h: 1
+numar ordine: 291
 ##..##
 #....#
 #..aa#
@@ -3741,9 +4143,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.031914472579956055 sec 
+nr noduri generate: 193 
+nr noduri maxim in memorie: 31 
 Cost: 13
 Lungime: 8
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -3754,6 +4160,7 @@ h: 1
 
 Moved a to >
 h: 3
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -3764,6 +4171,7 @@ h: 3
 
 Moved a to v
 h: 3
+numar ordine: 26
 ##..##
 #*...#
 #**aa#
@@ -3774,6 +4182,7 @@ h: 3
 
 Moved a to v
 h: 3
+numar ordine: 81
 ##..##
 #*...#
 #**..#
@@ -3784,6 +4193,7 @@ h: 3
 
 Moved * to >
 h: 3
+numar ordine: 158
 ##..##
 #.*..#
 #.**.#
@@ -3794,6 +4204,7 @@ h: 3
 
 Moved * to ^
 h: 2
+numar ordine: 181
 ##*.##
 #.**.#
 #....#
@@ -3804,6 +4215,7 @@ h: 2
 
 Moved * to ^
 h: 1
+numar ordine: 186
 ##**##
 #....#
 #....#
@@ -3814,6 +4226,7 @@ h: 1
 
 Moved * to ^
 h: 0
+numar ordine: 190
 ##..##
 #....#
 #....#
@@ -3829,9 +4242,13 @@ h: 0
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.047872066497802734 sec 
+nr noduri generate: 258 
+nr noduri maxim in memorie: 33 
 Cost: 15
 Lungime: 10
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -3842,6 +4259,7 @@ h: 1
 
 Moved * to v
 h: 3
+numar ordine: 1
 ##..##
 #.aa.#
 #*.a.#
@@ -3852,6 +4270,7 @@ h: 3
 
 Moved a to >
 h: 4
+numar ordine: 8
 ##..##
 #..aa#
 #*..a#
@@ -3862,6 +4281,7 @@ h: 4
 
 Moved a to v
 h: 4
+numar ordine: 55
 ##..##
 #....#
 #*.aa#
@@ -3872,6 +4292,7 @@ h: 4
 
 Moved a to v
 h: 4
+numar ordine: 142
 ##..##
 #....#
 #*...#
@@ -3882,6 +4303,7 @@ h: 4
 
 Moved * to ^
 h: 4
+numar ordine: 232
 ##..##
 #*...#
 #**..#
@@ -3892,6 +4314,7 @@ h: 4
 
 Moved * to >
 h: 3
+numar ordine: 243
 ##..##
 #.*..#
 #.**.#
@@ -3902,6 +4325,7 @@ h: 3
 
 Moved * to ^
 h: 2
+numar ordine: 246
 ##*.##
 #.**.#
 #....#
@@ -3912,6 +4336,7 @@ h: 2
 
 Moved * to ^
 h: 1
+numar ordine: 251
 ##**##
 #....#
 #....#
@@ -3922,6 +4347,7 @@ h: 1
 
 Moved * to ^
 h: 0
+numar ordine: 255
 ##..##
 #....#
 #....#
@@ -3937,9 +4363,13 @@ h: 0
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.05385589599609375 sec 
+nr noduri generate: 260 
+nr noduri maxim in memorie: 33 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -3950,6 +4380,7 @@ h: 1
 
 Moved a to >
 h: 3
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -3960,6 +4391,7 @@ h: 3
 
 Moved a to v
 h: 3
+numar ordine: 26
 ##..##
 #*...#
 #**aa#
@@ -3970,6 +4402,7 @@ h: 3
 
 Moved a to v
 h: 3
+numar ordine: 81
 ##..##
 #*...#
 #**..#
@@ -3980,6 +4413,7 @@ h: 3
 
 Moved * to >
 h: 3
+numar ordine: 158
 ##..##
 #.*..#
 #.**.#
@@ -3990,6 +4424,7 @@ h: 3
 
 Moved * to ^
 h: 2
+numar ordine: 181
 ##*.##
 #.**.#
 #....#
@@ -4000,6 +4435,7 @@ h: 2
 
 Moved * to ^
 h: 1
+numar ordine: 186
 ##**##
 #....#
 #....#
@@ -4010,6 +4446,7 @@ h: 1
 
 Moved * to ^
 h: 0
+numar ordine: 190
 ##..##
 #....#
 #....#
@@ -4020,6 +4457,7 @@ h: 0
 
 Moved a to <
 h: -1
+numar ordine: 194
 ##..##
 #....#
 #....#
@@ -4035,9 +4473,13 @@ h: -1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.05984020233154297 sec 
+nr noduri generate: 263 
+nr noduri maxim in memorie: 33 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -4048,6 +4490,7 @@ h: 1
 
 Moved a to >
 h: 3
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -4058,6 +4501,7 @@ h: 3
 
 Moved a to v
 h: 3
+numar ordine: 26
 ##..##
 #*...#
 #**aa#
@@ -4068,6 +4512,7 @@ h: 3
 
 Moved a to v
 h: 3
+numar ordine: 81
 ##..##
 #*...#
 #**..#
@@ -4078,6 +4523,7 @@ h: 3
 
 Moved * to >
 h: 3
+numar ordine: 158
 ##..##
 #.*..#
 #.**.#
@@ -4088,6 +4534,7 @@ h: 3
 
 Moved * to ^
 h: 2
+numar ordine: 181
 ##*.##
 #.**.#
 #....#
@@ -4098,6 +4545,7 @@ h: 2
 
 Moved * to ^
 h: 1
+numar ordine: 186
 ##**##
 #....#
 #....#
@@ -4108,6 +4556,7 @@ h: 1
 
 Moved * to ^
 h: 0
+numar ordine: 190
 ##..##
 #....#
 #....#
@@ -4118,6 +4567,7 @@ h: 0
 
 Moved a to ^
 h: -1
+numar ordine: 193
 ##..##
 #....#
 #..aa#
@@ -4133,9 +4583,13 @@ h: -1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.08078479766845703 sec 
+nr noduri generate: 291 
+nr noduri maxim in memorie: 40 
 Cost: 15
 Lungime: 10
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -4146,6 +4600,7 @@ h: 1
 
 Moved a to >
 h: 3
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -4156,6 +4611,7 @@ h: 3
 
 Moved a to v
 h: 3
+numar ordine: 26
 ##..##
 #*...#
 #**aa#
@@ -4166,6 +4622,7 @@ h: 3
 
 Moved a to v
 h: 3
+numar ordine: 81
 ##..##
 #*...#
 #**..#
@@ -4176,6 +4633,7 @@ h: 3
 
 Moved * to >
 h: 3
+numar ordine: 158
 ##..##
 #.*..#
 #.**.#
@@ -4186,6 +4644,7 @@ h: 3
 
 Moved * to >
 h: 2
+numar ordine: 182
 ##..##
 #..*.#
 #..**#
@@ -4196,6 +4655,7 @@ h: 2
 
 Moved * to ^
 h: 3
+numar ordine: 184
 ##.*##
 #..**#
 #....#
@@ -4206,6 +4666,7 @@ h: 3
 
 Moved * to <
 h: 2
+numar ordine: 282
 ##*.##
 #.**.#
 #....#
@@ -4216,6 +4677,7 @@ h: 2
 
 Moved * to ^
 h: 1
+numar ordine: 285
 ##**##
 #....#
 #....#
@@ -4226,6 +4688,7 @@ h: 1
 
 Moved * to ^
 h: 0
+numar ordine: 288
 ##..##
 #....#
 #....#
@@ -4248,9 +4711,13 @@ h: 0
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.05285906791687012 sec 
+nr noduri generate: 333 
+nr noduri maxim in memorie: 33 
 Cost: 13
 Lungime: 8
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -4260,7 +4727,8 @@ h: 1
 
 
 Moved a to >
-h: 1
+h: 3
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -4270,7 +4738,8 @@ h: 1
 
 
 Moved a to v
-h: 1
+h: 2
+numar ordine: 43
 ##..##
 #*...#
 #**aa#
@@ -4280,7 +4749,8 @@ h: 1
 
 
 Moved a to v
-h: 1
+h: 3
+numar ordine: 148
 ##..##
 #*...#
 #**..#
@@ -4290,7 +4760,8 @@ h: 1
 
 
 Moved * to >
-h: 1
+h: 2
+numar ordine: 242
 ##..##
 #.*..#
 #.**.#
@@ -4301,6 +4772,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 244
 ##*.##
 #.**.#
 #....#
@@ -4311,6 +4783,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 249
 ##**##
 #....#
 #....#
@@ -4320,7 +4793,8 @@ h: 1
 
 
 Moved * to ^
-h: 1
+h: 2
+numar ordine: 253
 ##..##
 #....#
 #....#
@@ -4336,255 +4810,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
-Cost: 15
-Lungime: 10
-h: 1
-##..##
-#*aa.#
-#**a.#
-#....#
-#....#
-######
-
-
-Moved a to >
-h: 1
-##..##
-#*.aa#
-#**.a#
-#....#
-#....#
-######
-
-
-Moved a to v
-h: 1
-##..##
-#*...#
-#**aa#
-#...a#
-#....#
-######
-
-
-Moved a to v
-h: 1
-##..##
-#*...#
-#**..#
-#..aa#
-#...a#
-######
-
-
-Moved * to >
-h: 1
-##..##
-#.*..#
-#.**.#
-#..aa#
-#...a#
-######
-
-
-Moved * to >
-h: 1
-##..##
-#..*.#
-#..**#
-#..aa#
-#...a#
-######
-
-
-Moved * to ^
-h: 1
-##.*##
-#..**#
-#....#
-#..aa#
-#...a#
-######
-
-
-Moved * to <
-h: 1
-##*.##
-#.**.#
-#....#
-#..aa#
-#...a#
-######
-
-
-Moved * to ^
-h: 1
-##**##
-#....#
-#....#
-#..aa#
-#...a#
-######
-
-
-Moved * to ^
-h: 1
-##..##
-#....#
-#....#
-#..aa#
-#...a#
-######
-
-
-
-╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
-┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
-┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
-╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
-┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
-╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
-Cost: 16
-Lungime: 13
-h: 1
-##..##
-#*aa.#
-#**a.#
-#....#
-#....#
-######
-
-
-Moved * to v
-h: 1
-##..##
-#.aa.#
-#*.a.#
-#**..#
-#....#
-######
-
-
-Moved * to >
-h: 1
-##..##
-#.aa.#
-#.*a.#
-#.**.#
-#....#
-######
-
-
-Moved * to v
-h: 1
-##..##
-#.aa.#
-#..a.#
-#.*..#
-#.**.#
-######
-
-
-Moved * to >
-h: 1
-##..##
-#.aa.#
-#..a.#
-#..*.#
-#..**#
-######
-
-
-Moved a to <
-h: 1
-##..##
-#aa..#
-#.a..#
-#..*.#
-#..**#
-######
-
-
-Moved * to ^
-h: 1
-##..##
-#aa..#
-#.a*.#
-#..**#
-#....#
-######
-
-
-Moved * to ^
-h: 1
-##..##
-#aa*.#
-#.a**#
-#....#
-#....#
-######
-
-
-Moved * to ^
-h: 1
-##.*##
-#aa**#
-#.a..#
-#....#
-#....#
-######
-
-
-Moved a to v
-h: 1
-##.*##
-#..**#
-#aa..#
-#.a..#
-#....#
-######
-
-
-Moved * to <
-h: 1
-##*.##
-#.**.#
-#aa..#
-#.a..#
-#....#
-######
-
-
-Moved * to ^
-h: 1
-##**##
-#....#
-#aa..#
-#.a..#
-#....#
-######
-
-
-Moved * to ^
-h: 1
-##..##
-#....#
-#aa..#
-#.a..#
-#....#
-######
-
-
-
-╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
-┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
-┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
-╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
-┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
-╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.06482696533203125 sec 
+nr noduri generate: 372 
+nr noduri maxim in memorie: 36 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -4594,7 +4826,8 @@ h: 1
 
 
 Moved a to >
-h: 1
+h: 3
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -4604,7 +4837,8 @@ h: 1
 
 
 Moved a to v
-h: 1
+h: 2
+numar ordine: 43
 ##..##
 #*...#
 #**aa#
@@ -4614,7 +4848,8 @@ h: 1
 
 
 Moved a to v
-h: 1
+h: 3
+numar ordine: 148
 ##..##
 #*...#
 #**..#
@@ -4624,7 +4859,8 @@ h: 1
 
 
 Moved * to >
-h: 1
+h: 2
+numar ordine: 242
 ##..##
 #.*..#
 #.**.#
@@ -4635,6 +4871,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 244
 ##*.##
 #.**.#
 #....#
@@ -4645,6 +4882,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 249
 ##**##
 #....#
 #....#
@@ -4654,7 +4892,8 @@ h: 1
 
 
 Moved * to ^
-h: 1
+h: 2
+numar ordine: 253
 ##..##
 #....#
 #....#
@@ -4664,7 +4903,8 @@ h: 1
 
 
 Moved a to <
-h: 1
+h: 0
+numar ordine: 334
 ##..##
 #....#
 #....#
@@ -4680,9 +4920,13 @@ h: 1
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
 ╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.07081103324890137 sec 
+nr noduri generate: 375 
+nr noduri maxim in memorie: 36 
 Cost: 16
 Lungime: 9
 h: 1
+numar ordine: 0
 ##..##
 #*aa.#
 #**a.#
@@ -4692,7 +4936,8 @@ h: 1
 
 
 Moved a to >
-h: 1
+h: 3
+numar ordine: 3
 ##..##
 #*.aa#
 #**.a#
@@ -4702,7 +4947,8 @@ h: 1
 
 
 Moved a to v
-h: 1
+h: 2
+numar ordine: 43
 ##..##
 #*...#
 #**aa#
@@ -4712,7 +4958,8 @@ h: 1
 
 
 Moved a to v
-h: 1
+h: 3
+numar ordine: 148
 ##..##
 #*...#
 #**..#
@@ -4722,7 +4969,8 @@ h: 1
 
 
 Moved * to >
-h: 1
+h: 2
+numar ordine: 242
 ##..##
 #.*..#
 #.**.#
@@ -4733,6 +4981,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 244
 ##*.##
 #.**.#
 #....#
@@ -4743,6 +4992,7 @@ h: 1
 
 Moved * to ^
 h: 1
+numar ordine: 249
 ##**##
 #....#
 #....#
@@ -4752,7 +5002,8 @@ h: 1
 
 
 Moved * to ^
-h: 1
+h: 2
+numar ordine: 253
 ##..##
 #....#
 #....#
@@ -4762,12 +5013,233 @@ h: 1
 
 
 Moved a to ^
-h: 1
+h: 0
+numar ordine: 333
 ##..##
 #....#
 #..aa#
 #...a#
 #....#
+######
+
+
+
+╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
+┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
+┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
+╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
+┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
+╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.09574389457702637 sec 
+nr noduri generate: 502 
+nr noduri maxim in memorie: 47 
+Cost: 16
+Lungime: 9
+h: 1
+numar ordine: 0
+##..##
+#*aa.#
+#**a.#
+#....#
+#....#
+######
+
+
+Moved a to >
+h: 3
+numar ordine: 3
+##..##
+#*.aa#
+#**.a#
+#....#
+#....#
+######
+
+
+Moved a to v
+h: 2
+numar ordine: 43
+##..##
+#*...#
+#**aa#
+#...a#
+#....#
+######
+
+
+Moved a to v
+h: 3
+numar ordine: 148
+##..##
+#*...#
+#**..#
+#..aa#
+#...a#
+######
+
+
+Moved * to >
+h: 2
+numar ordine: 242
+##..##
+#.*..#
+#.**.#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 244
+##*.##
+#.**.#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 249
+##**##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved a to ^
+h: 2
+numar ordine: 254
+##**##
+#....#
+#..aa#
+#...a#
+#....#
+######
+
+
+Moved * to ^
+h: 2
+numar ordine: 498
+##..##
+#....#
+#..aa#
+#...a#
+#....#
+######
+
+
+
+╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
+┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
+┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
+╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
+┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
+╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.10172867774963379 sec 
+nr noduri generate: 505 
+nr noduri maxim in memorie: 47 
+Cost: 16
+Lungime: 9
+h: 1
+numar ordine: 0
+##..##
+#*aa.#
+#**a.#
+#....#
+#....#
+######
+
+
+Moved a to >
+h: 3
+numar ordine: 3
+##..##
+#*.aa#
+#**.a#
+#....#
+#....#
+######
+
+
+Moved a to v
+h: 2
+numar ordine: 43
+##..##
+#*...#
+#**aa#
+#...a#
+#....#
+######
+
+
+Moved a to v
+h: 3
+numar ordine: 148
+##..##
+#*...#
+#**..#
+#..aa#
+#...a#
+######
+
+
+Moved * to >
+h: 2
+numar ordine: 242
+##..##
+#.*..#
+#.**.#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 244
+##*.##
+#.**.#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 249
+##**##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved a to <
+h: 2
+numar ordine: 255
+##**##
+#....#
+#....#
+#.aa.#
+#..a.#
+######
+
+
+Moved * to ^
+h: 2
+numar ordine: 494
+##..##
+#....#
+#....#
+#.aa.#
+#..a.#
 ######
 
 
@@ -4817,7 +5289,106 @@ idastar
     ┃┃━┫┃┃┃┏╋┫━━┫┃┣┫┏━┫┏┓┃┃┏┓┃┏┓┃┏┓┫┏┓┃┃┃┏┓┃
     ┃┃━┫┗┛┃┃┃┣━━┃┗┫┃┗━┫┏┓┃┃┗┛┃┏┓┃┃┃┃┏┓┃┗┫┏┓┃
     ┗━━┻━━┻┛┗┻━━┻━┻┻━━┻┛┗┛┗━━┻┛┗┻┛┗┻┛┗┻━┻┛┗┛
-    idastar exceeded timeout
+    
+╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
+┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
+┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
+╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
+┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
+╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 3.7484543323516846 sec 
+nr noduri generate: 28485 
+nr noduri maxim in memorie: 12 
+Cost: 13
+Lungime: 8
+h: 1
+numar ordine: 0
+##..##
+#*aa.#
+#**a.#
+#....#
+#....#
+######
+
+
+Moved a to >
+h: 1
+numar ordine: 16445
+##..##
+#*.aa#
+#**.a#
+#....#
+#....#
+######
+
+
+Moved a to v
+h: 1
+numar ordine: 25649
+##..##
+#*...#
+#**aa#
+#...a#
+#....#
+######
+
+
+Moved a to v
+h: 1
+numar ordine: 28232
+##..##
+#*...#
+#**..#
+#..aa#
+#...a#
+######
+
+
+Moved * to >
+h: 1
+numar ordine: 28463
+##..##
+#.*..#
+#.**.#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 28475
+##*.##
+#.**.#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 28478
+##**##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 28482
+##..##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+idastar exceeded timeout
 
     ╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋╋╋╋╋╋╋┏┓╋╋┏┓╋╋╋╋╋┏┓
     ╋╋╋╋╋╋╋╋╋╋╋┏┛┗┓╋╋╋╋╋╋╋╋╋╋╋╋┃┃╋╋╋╋╋╋╋┃┃╋╋┃┃╋╋╋╋┏┛┃
@@ -4826,6 +5397,589 @@ idastar
     ┃┃━┫┗┛┃┃┃┣━━┃┗┫┃┗━┫┏┓┃┃┏┓┃┗┛┃┃┃┃┣━━┃┃┗┛┃┃┗┫┏┓┃┏┛┗┓
     ┗━━┻━━┻┛┗┻━━┻━┻┻━━┻┛┗┛┗┛┗┻━━┻┻┻┻┻━━┻┻━━┻┻━┻┛┗┛┗━━┛
     
+╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
+┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
+┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
+╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
+┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
+╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 0.47872233390808105 sec 
+nr noduri generate: 3561 
+nr noduri maxim in memorie: 10 
+Cost: 13
+Lungime: 8
+h: 1
+numar ordine: 0
+##..##
+#*aa.#
+#**a.#
+#....#
+#....#
+######
+
+
+Moved a to >
+h: 3
+numar ordine: 1980
+##..##
+#*.aa#
+#**.a#
+#....#
+#....#
+######
+
+
+Moved a to v
+h: 3
+numar ordine: 3296
+##..##
+#*...#
+#**aa#
+#...a#
+#....#
+######
+
+
+Moved a to v
+h: 3
+numar ordine: 3529
+##..##
+#*...#
+#**..#
+#..aa#
+#...a#
+######
+
+
+Moved * to >
+h: 3
+numar ordine: 3547
+##..##
+#.*..#
+#.**.#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 2
+numar ordine: 3551
+##*.##
+#.**.#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 3554
+##**##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 0
+numar ordine: 3558
+##..##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+
+╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
+┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
+┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
+╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
+┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
+╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 1.1543900966644287 sec 
+nr noduri generate: 8231 
+nr noduri maxim in memorie: 12 
+Cost: 15
+Lungime: 10
+h: 1
+numar ordine: 0
+##..##
+#*aa.#
+#**a.#
+#....#
+#....#
+######
+
+
+Moved * to v
+h: 3
+numar ordine: 6210
+##..##
+#.aa.#
+#*.a.#
+#**..#
+#....#
+######
+
+
+Moved a to v
+h: 4
+numar ordine: 6216
+##..##
+#....#
+#*aa.#
+#**a.#
+#....#
+######
+
+
+Moved a to >
+h: 4
+numar ordine: 8119
+##..##
+#....#
+#*.aa#
+#**.a#
+#....#
+######
+
+
+Moved * to ^
+h: 4
+numar ordine: 8200
+##..##
+#*...#
+#**aa#
+#...a#
+#....#
+######
+
+
+Moved a to v
+h: 3
+numar ordine: 8206
+##..##
+#*...#
+#**..#
+#..aa#
+#...a#
+######
+
+
+Moved * to >
+h: 3
+numar ordine: 8218
+##..##
+#.*..#
+#.**.#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 2
+numar ordine: 8221
+##*.##
+#.**.#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 8224
+##**##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 0
+numar ordine: 8228
+##..##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+
+╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
+┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
+┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
+╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
+┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
+╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 1.1723427772521973 sec 
+nr noduri generate: 8315 
+nr noduri maxim in memorie: 12 
+Cost: 15
+Lungime: 10
+h: 1
+numar ordine: 0
+##..##
+#*aa.#
+#**a.#
+#....#
+#....#
+######
+
+
+Moved * to v
+h: 3
+numar ordine: 6210
+##..##
+#.aa.#
+#*.a.#
+#**..#
+#....#
+######
+
+
+Moved a to v
+h: 4
+numar ordine: 6216
+##..##
+#....#
+#*aa.#
+#**a.#
+#....#
+######
+
+
+Moved a to >
+h: 4
+numar ordine: 8119
+##..##
+#....#
+#*.aa#
+#**.a#
+#....#
+######
+
+
+Moved a to v
+h: 4
+numar ordine: 8204
+##..##
+#....#
+#*...#
+#**aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 4
+numar ordine: 8300
+##..##
+#*...#
+#**..#
+#..aa#
+#...a#
+######
+
+
+Moved * to >
+h: 3
+numar ordine: 8302
+##..##
+#.*..#
+#.**.#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 2
+numar ordine: 8305
+##*.##
+#.**.#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 8308
+##**##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 0
+numar ordine: 8312
+##..##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+
+╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
+┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
+┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
+╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
+┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
+╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 1.1922886371612549 sec 
+nr noduri generate: 8416 
+nr noduri maxim in memorie: 12 
+Cost: 15
+Lungime: 10
+h: 1
+numar ordine: 0
+##..##
+#*aa.#
+#**a.#
+#....#
+#....#
+######
+
+
+Moved * to v
+h: 3
+numar ordine: 6210
+##..##
+#.aa.#
+#*.a.#
+#**..#
+#....#
+######
+
+
+Moved a to >
+h: 4
+numar ordine: 6217
+##..##
+#..aa#
+#*..a#
+#**..#
+#....#
+######
+
+
+Moved * to ^
+h: 4
+numar ordine: 8325
+##..##
+#*.aa#
+#**.a#
+#....#
+#....#
+######
+
+
+Moved a to v
+h: 3
+numar ordine: 8330
+##..##
+#*...#
+#**aa#
+#...a#
+#....#
+######
+
+
+Moved a to v
+h: 3
+numar ordine: 8385
+##..##
+#*...#
+#**..#
+#..aa#
+#...a#
+######
+
+
+Moved * to >
+h: 3
+numar ordine: 8402
+##..##
+#.*..#
+#.**.#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 2
+numar ordine: 8406
+##*.##
+#.**.#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 8409
+##**##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 0
+numar ordine: 8413
+##..##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+
+╭━━━┳━━━┳╮╱╱╭╮╱╭┳━━━━┳━━┳━━━┳━╮╱╭╮
+┃╭━╮┃╭━╮┃┃╱╱┃┃╱┃┃╭╮╭╮┣┫┣┫╭━╮┃┃╰╮┃┃
+┃╰━━┫┃╱┃┃┃╱╱┃┃╱┃┣╯┃┃╰╯┃┃┃┃╱┃┃╭╮╰╯┃
+╰━━╮┃┃╱┃┃┃╱╭┫┃╱┃┃╱┃┃╱╱┃┃┃┃╱┃┃┃╰╮┃┃
+┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╱┃┃╱╭┫┣┫╰━╯┃┃╱┃┃┃
+╰━━━┻━━━┻━━━┻━━━╯╱╰╯╱╰━━┻━━━┻╯╱╰━╯
+durata: 1.239163875579834 sec 
+nr noduri generate: 8709 
+nr noduri maxim in memorie: 12 
+Cost: 15
+Lungime: 10
+h: 1
+numar ordine: 0
+##..##
+#*aa.#
+#**a.#
+#....#
+#....#
+######
+
+
+Moved * to v
+h: 3
+numar ordine: 6210
+##..##
+#.aa.#
+#*.a.#
+#**..#
+#....#
+######
+
+
+Moved a to >
+h: 4
+numar ordine: 6217
+##..##
+#..aa#
+#*..a#
+#**..#
+#....#
+######
+
+
+Moved a to v
+h: 4
+numar ordine: 8328
+##..##
+#....#
+#*.aa#
+#**.a#
+#....#
+######
+
+
+Moved * to ^
+h: 4
+numar ordine: 8682
+##..##
+#*...#
+#**aa#
+#...a#
+#....#
+######
+
+
+Moved a to v
+h: 3
+numar ordine: 8688
+##..##
+#*...#
+#**..#
+#..aa#
+#...a#
+######
+
+
+Moved * to >
+h: 3
+numar ordine: 8696
+##..##
+#.*..#
+#.**.#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 2
+numar ordine: 8699
+##*.##
+#.**.#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 1
+numar ordine: 8702
+##**##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+Moved * to ^
+h: 0
+numar ordine: 8706
+##..##
+#....#
+#....#
+#..aa#
+#...a#
+######
+
+
+
     ╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋┏┓╋╋╋╋╋╋╋┏┓╋╋┏┓╋╋╋╋╋┏┓
     ╋╋╋╋╋╋╋╋╋╋╋┏┛┗┓╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋┃┃╋╋╋╋╋╋╋┃┃╋╋┃┃╋╋╋╋┏┛┃
     ┏━━┳┓┏┳━┳┳━┻┓┏╋┳━━┳━━┓┏━┓┏━━┳━━┳━┛┣┓┏┳┳━━┳┫┗━┳┫┃┏━━┓┗┓┃

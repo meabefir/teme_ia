@@ -1,16 +1,17 @@
 import big_text
 from classes import *
 import stopit
+import time
 
-it = 0
 
 @stopit.threading_timeoutable(default="intrat in timeout")
 def ida_star_noprint(gr, nrSolutiiCautate, tip_euristica="euristica admisibila 1", fout=None):
     nodStart =  NodParcurgere(gr.start, None, {}, 0, gr.calculeaza_h(gr.start))
     limita = nodStart.f
-    while True:
+    start = time.time()
 
-        nrSolutiiCautate, rez = construieste_drum_noprint(gr, nodStart, limita, nrSolutiiCautate, tip_euristica, fout)
+    while True:
+        nrSolutiiCautate, rez = construieste_drum_noprint(gr, nodStart, limita, nrSolutiiCautate, tip_euristica, start, fout=fout)
         if rez == "gata":
             return nrSolutiiCautate
         if rez == float('inf'):
@@ -18,9 +19,8 @@ def ida_star_noprint(gr, nrSolutiiCautate, tip_euristica="euristica admisibila 1
         limita = rez
 
 
-def construieste_drum_noprint(gr, nodCurent, limita, nrSolutiiCautate, tip_euristica, fout=None):
-    global it
-    it += 1
+def construieste_drum_noprint(gr, nodCurent, limita, nrSolutiiCautate, tip_euristica, start, adancime=0, fout=None):
+    gr.noduri_maxim = max(gr.noduri_maxim, adancime)
     if nodCurent.f > limita:
         return nrSolutiiCautate, nodCurent.f
 
@@ -32,6 +32,9 @@ def construieste_drum_noprint(gr, nodCurent, limita, nrSolutiiCautate, tip_euris
 
         if fout is not None:
             fout.write(big_text.solution)
+            fout.write(f"durata: {time.time() - start} sec \n")
+            fout.write(f"nr noduri generate: {gr.noduri_generate} \n")
+            fout.write(f"nr noduri maxim in memorie: {gr.noduri_maxim} \n")
             fout.write(nodCurent.strAfisDrum())
 
         nrSolutiiCautate -= 1
@@ -41,7 +44,7 @@ def construieste_drum_noprint(gr, nodCurent, limita, nrSolutiiCautate, tip_euris
     lSuccesori = gr.genereazaSuccesori(nodCurent, tip_euristica)
     minim = float('inf')
     for s in lSuccesori:
-        nrSolutiiCautate, rez = construieste_drum_noprint(gr, s, limita, nrSolutiiCautate, tip_euristica)
+        nrSolutiiCautate, rez = construieste_drum_noprint(gr, s, limita, nrSolutiiCautate, tip_euristica, start, adancime+1, fout)
         if rez == "gata":
             return nrSolutiiCautate, "gata"
         if rez < minim:

@@ -7,9 +7,8 @@ from pygame_stuff.Game import Game
 
 screen = pygame.display.set_mode([500, 500])
 
-initialGame = Game(file="../input/input6.txt")
-# game = Game(file="../input/klotskiez.txt")
-# game = Game(rows=4, cols=5)
+initialGame = Game(file="../input/input1.txt")
+# initialGame = Game(rows=2, cols=2)
 game = copy.deepcopy(initialGame)
 clock = pygame.time.Clock()
 

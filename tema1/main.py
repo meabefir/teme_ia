@@ -72,6 +72,7 @@ if __name__ == '__main__':
             }
             fout = open(os.path.join(output_folder, "o_" + file_name), 'w', encoding="utf-8")
             algs = ["dfs", "bfs", "dfi", "astar", "astar_opti", "idastar"]
+            # algs = ["idastar"]
             heuristics = ["euristica banala", "euristica admisibila 1", "euristica neadmisibila 1"]
             for alg in algs:
                 fout.write(alg+'\n')
@@ -80,14 +81,17 @@ if __name__ == '__main__':
                     res = alg_callbacks[alg](Graph(path), nsol, timeout=timeout, fout=fout)
                     if isinstance(res, str):
                         fout.write(f"{alg} exceeded timeout\n")
+                    if res is None:
+                        fout.write("nu are solutii\n")
                 else:
                     for h in heuristics:
                         fout.write(big_text.heuristics[h])
                         res = alg_callbacks[alg](Graph(path), nsol, h, timeout=timeout, fout=fout)
                         if isinstance(res, str):
                             fout.write(f"{alg} exceeded timeout\n")
+                        if res is None:
+                            fout.write("nu are solutii\n")
             fout.close()
-
 
     # creeaza folder de output daca nu exista deja
     if not os.path.isdir(output_folder):
