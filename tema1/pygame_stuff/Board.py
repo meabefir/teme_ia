@@ -149,11 +149,11 @@ class Board:
             rev_dic[val] = key
         graph = Graph(None, s)
 
-        _timeout = 5
+        _timeout = 10
         # moves = bfs(graph, 1, timeout=_timeout)
         # moves = dfs(graph, 1, timeout=_timeout)
         # moves = dfi(graph, 1, timeout=_timeout)
-        moves = a_star(graph, 1, "euristica admisibila 2", timeout=_timeout)
+        moves = a_star(graph, 1, "euristica admisibila 1", timeout=_timeout)
         # moves = a_star(graph, 1, "euristica neadmisibila 1", timeout=_timeout)
         # moves = a_star_opt(graph, 1, "euristica admisibila 1", timeout=_timeout)
         # moves = ida_star_noprint(graph, 1, "euristica admisibila 1", timeout=_timeout)
