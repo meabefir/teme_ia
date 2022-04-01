@@ -2,6 +2,8 @@ import pygame
 
 from ..Helper import *
 from .DefaultController import DefaultController
+from .CaptureController import CaptureController
+from ..EventManager import EventManager
 
 class MovingController:
     def __init__(self, node, target_node, *args):
@@ -29,6 +31,13 @@ class MovingController:
             self.node.coords = self.original_coords
             # operation graph to swap those two
             self.node.graph.swap_nodes(self.node.board_coords, self.target_node.board_coords)
+
+            # after swap check if target node forms a line
+            if not self.node.graph.formed_line(self.target_node):
+                EventManager.emit_signal("next_turn")
+                return
+
+            self.node.graph.capture_mode()
 
     def render(self, screen):
         if self.node.value == 'black':

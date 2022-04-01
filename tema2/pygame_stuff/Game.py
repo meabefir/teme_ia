@@ -11,10 +11,13 @@ class Game:
     def __init__(self, screen_size):
         self.size = screen_size
 
-        self.max_color = 'white'
-        self.min_color = 'black'
+        self.max_color = 'black'
+        self.min_color = 'black' if self.max_color == 'white' else 'white'
 
-        self.padding = 30
+        self.max_pieces = 12
+        self.min_pieces = 12
+
+        self.padding = 40
         self.cell_size = (screen_size - self.padding * 2) / 6
         self.board_surface = pygame.Surface((self.size - 2*self.padding, self.size - 2*self.padding))
         self.board_surface.fill(pygame.Color("white"))

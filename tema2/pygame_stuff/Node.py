@@ -83,8 +83,16 @@ class Node:
 
         screen.blit(text, text_rect)
 
+    def render_node_board_coords(self, screen):
+        text = self.font.render(str(self.board_coords), True, pygame.Color("black"))
+        text_rect = text.get_rect()
+        text_rect.center = (self.coords[0], self.coords[1] - 30)
+
+        screen.blit(text, text_rect)
+
     def render_debug(self, screen):
         self.render_node_controller(screen)
+        self.render_node_board_coords(screen)
 
     def render(self, screen):
         self.controller.render(screen)

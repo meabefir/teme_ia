@@ -1,0 +1,2 @@
+optiune sa elimini piesa daca ai facut linie, fie prin mutare, fie prin plasare
+numar limitat de piese+
