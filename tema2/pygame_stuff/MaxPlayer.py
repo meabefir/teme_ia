@@ -1,5 +1,6 @@
 import pygame
 import random
+import time
 
 from .EventManager import EventManager
 from .node_controllers.MovingController import MovingController
@@ -12,7 +13,26 @@ class MaxPlayer:
 
         EventManager.emit_signal("max_turn")
 
+    def execute_last_move(self, last_move):
+        nodes = self.game.graph.nodes
+        if isinstance(last_move, PiecePlacement):
+            nodes[last_move.from_coords].value = self.game.max_color
+            self.game.graph.max_pieces -= 1
+            if last_move.taken_coords is not None:
+                nodes[last_move.taken_coords].value = None
+            EventManager.emit_signal("next_turn")
+        elif isinstance(last_move, PieceMove):
+            nodes[last_move.from_coords].set_controller(MovingController, nodes[last_move.to_coords], nodes[
+                last_move.taken_coords] if last_move.taken_coords is not None else None)
+
     def play_turn(self):
+        depth = 1
+        if self.game.difficulty == 'mediu':
+            depth = 2
+        elif self.game.difficulty == 'greu':
+            depth = 3
+
+        start_time = time.time()
 
         if self.game.max_strategy == "test":
             if self.game.max_pieces == 0:
@@ -20,25 +40,26 @@ class MaxPlayer:
             else:
                 self.place_random_piece()
         elif self.game.max_strategy == "min-max":
-            stare_start = Stare(self.game.graph, self.game.max_color, 2, self.game)
+            stare_start = Stare(self.game.graph, self.game.max_color, depth, self.game)
 
             outcome = self.min_max(stare_start)
             print("\n\n\nAICI")
             print(outcome)
             last_move = outcome.stare_aleasa.tabla_joc.last_move
             print(last_move)
-            nodes = self.game.graph.nodes
-            if isinstance(last_move, PiecePlacement):
-                nodes[last_move.from_coords].value = self.game.max_color
-                self.game.graph.max_pieces -= 1
-                if last_move.taken_coords is not None:
-                    nodes[last_move.taken_coords].value = None
-                EventManager.emit_signal("next_turn")
-            elif isinstance(last_move, PieceMove):
-                nodes[last_move.from_coords].set_controller(MovingController, nodes[last_move.to_coords], nodes[last_move.taken_coords] if last_move.taken_coords is not None else None)
-                # node.set_controller(MovingController, neigh, to_capture)
+            self.execute_last_move(last_move)
+        elif self.game.max_strategy == "alpha-beta":
+            stare_start = Stare(self.game.graph, self.game.max_color, depth, self.game)
 
-            # print(outcome.tabla_joc.last_move)
+            outcome = self.alpha_beta(-999, 999, stare_start)
+            print("\n\n\nAICI")
+            print(outcome)
+            last_move = outcome.stare_aleasa.tabla_joc.last_move
+            print(last_move)
+            self.execute_last_move(last_move)
+
+        elapsed = time.time() - start_time
+        print(f'aiu a stat sa se gandeasca {elapsed}')
 
         return
         # check what ai to use, min-max or alpha beta
@@ -116,6 +137,52 @@ class MaxPlayer:
             # daca jucatorul e JMIN aleg starea-fiica cu estimarea minima
             stare.stare_aleasa = min(mutariCuEstimare, key=lambda x: x.estimare)
         stare.estimare = stare.stare_aleasa.estimare
+        return stare
+
+
+    def alpha_beta(self, alpha, beta, stare):
+        # if stare.adancime == 0 or stare.tabla_joc.final():
+        if stare.adancime == 0:
+            stare.estimare = stare.tabla_joc.estimeaza_scor(stare.adancime)
+            return stare
+
+        if alpha > beta:
+            return stare  # este intr-un interval invalid deci nu o mai procesez
+
+        stare.mutari_posibile = stare.mutari()
+
+        if stare.j_curent == self.game.max_color:
+            estimare_curenta = float('-inf')
+
+            for mutare in stare.mutari_posibile:
+                # calculeaza estimarea pentru starea noua, realizand subarborele
+                stare_noua = self.alpha_beta(alpha, beta, mutare)
+
+                if (estimare_curenta < stare_noua.estimare):
+                    stare.stare_aleasa = stare_noua
+                    estimare_curenta = stare_noua.estimare
+                if (alpha < stare_noua.estimare):
+                    alpha = stare_noua.estimare
+                    if alpha >= beta:
+                        break
+
+        elif stare.j_curent == self.game.min_color:
+            estimare_curenta = float('inf')
+
+            for mutare in stare.mutari_posibile:
+
+                stare_noua = self.alpha_beta(alpha, beta, mutare)
+
+                if (estimare_curenta > stare_noua.estimare):
+                    stare.stare_aleasa = stare_noua
+                    estimare_curenta = stare_noua.estimare
+
+                if (beta > stare_noua.estimare):
+                    beta = stare_noua.estimare
+                    if alpha >= beta:
+                        break
+        stare.estimare = stare.stare_aleasa.estimare
+
         return stare
 
 
