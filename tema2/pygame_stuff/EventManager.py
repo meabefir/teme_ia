@@ -17,4 +17,4 @@ class EventManager:
     @staticmethod
     def emit_signal(signal, *args):
         for callback in EventManager.SUBSCRIPTIONS[signal]:
-            callback(args)
+            callback(*args)

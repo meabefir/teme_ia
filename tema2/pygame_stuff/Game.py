@@ -14,8 +14,10 @@ class Game:
         self.max_color = 'black'
         self.min_color = 'black' if self.max_color == 'white' else 'white'
 
-        self.max_pieces = 12
-        self.min_pieces = 12
+        self.max_strategy = 'min-max'
+
+        self.max_pieces = 6
+        self.min_pieces = self.max_pieces
 
         self.padding = 40
         self.cell_size = (screen_size - self.padding * 2) / 6
@@ -27,10 +29,21 @@ class Game:
         self.current_player = MinPlayer()
 
         EventManager.connect("next_turn", self.next_turn)
+        EventManager.connect("end_game", self.end_game)
         # self.setup()
+
+    def jucator_opus(self, jucator):
+        if jucator == self.max_color:
+            return self.min_color
+        else:
+            return self.max_color
 
     def setup(self):
         pass
+
+    def end_game(self, winning_player, *args):
+        print("GAME ENDED WINNER")
+        print(winning_player)
 
     def handle_event(self, event):
 

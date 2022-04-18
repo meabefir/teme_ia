@@ -25,7 +25,6 @@ class CaptureController:
 
     def select(self):
         self.node.graph.capture(self.node)
-        EventManager.emit_signal("next_turn")
 
     def update(self):
         pass

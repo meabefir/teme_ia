@@ -6,8 +6,9 @@ from .CaptureController import CaptureController
 from ..EventManager import EventManager
 
 class MovingController:
-    def __init__(self, node, target_node, *args):
+    def __init__(self, node, target_node, to_capture = None, *args):
         self.target_node = target_node
+        self.to_capture = to_capture
         self.original_coords = node.coords
         self.node = node
         self.secs = 1
@@ -32,12 +33,22 @@ class MovingController:
             # operation graph to swap those two
             self.node.graph.swap_nodes(self.node.board_coords, self.target_node.board_coords)
 
-            # after swap check if target node forms a line
-            if not self.node.graph.formed_line(self.target_node):
-                EventManager.emit_signal("next_turn")
-                return
+            # allow min player to capture
+            if self.target_node.value == self.node.game.min_color:
+                # after swap check if target node forms a line
+                if not self.node.graph.formed_line(self.target_node):
+                    EventManager.emit_signal("next_turn")
+                    return
 
-            self.node.graph.capture_mode()
+                self.node.graph.capture_mode()
+            elif self.target_node.value == self.node.game.max_color:
+                if not self.node.graph.formed_line(self.target_node):
+                    EventManager.emit_signal("next_turn")
+                    return
+                else:
+                    if self.to_capture is not None:
+                        self.node.graph.capture(self.to_capture)
+
 
     def render(self, screen):
         if self.node.value == 'black':

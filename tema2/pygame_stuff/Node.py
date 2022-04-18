@@ -110,3 +110,6 @@ class Node:
         ret = ""
         ret += f'{self.board_coords} - {self.value}'
         return ret
+
+    def __repr__(self):
+        return str(self)
